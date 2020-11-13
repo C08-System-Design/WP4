@@ -1,7 +1,3 @@
-"""
-This file contains all the properties for the material that we select
-"""
-
 A7705_T6 = \
     {"rho": 1.225,  # density in kg/m^3
      "E": 71.7,  # Young's modulus in GPa
