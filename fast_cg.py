@@ -1,6 +1,7 @@
 """
 pick a coordinate system (cs)
     my guess is that in the centre of the xz plane is best
+    and symmetric over both the x axis and z axis
 import coordinates x_i , z_i of fasteners
 select a fastener diameter (are all the same?)
 get area
@@ -8,7 +9,7 @@ get x_cg , z_cg
 """
 
 
-def get_Af(D):  # area of a fastener
+def get_A_f(D):  # area of a fastener
     A = D**2/4
     return A
 
@@ -28,7 +29,7 @@ z_i = []
 D_i = []  # are all the same?
 A_i = []
 for i in D_i:
-    A_i.append(get_Af(i))
+    A_i.append(get_A_f(i))
 
 get_x_cg(A_i, x_i)
 get_z_cg(A_i, z_i)

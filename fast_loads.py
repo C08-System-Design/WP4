@@ -12,8 +12,8 @@ F_cg is a vector sum of loads F_x and F_z determined previously
 from math import sqrt
 
 
-def get_F_cg(F_x, F_z):
-    F_cg = sqrt(F_x**2+F_z**2)
+def get_F_cg(Fx, Fz):
+    F_cg = sqrt(Fx**2+Fz**2)
     return F_cg
 
 
@@ -29,8 +29,9 @@ def get_F_z(F):  # F = F_cgz
     return F_z
 
 
-def get_F_M_y(M, A, r):  # M is moment, A is fastener area and r is fastener arm
-    F_M_y = M*sum(A)*sum(r)/sum(A)/sum(r)/sum(r)
+def get_F_M_y(M, A, r, Ai, ri):  # M is moment, A is A_f, Ai and ri are lists
+    # with all fasteners and r is fastener arm
+    F_M_y = M*A*r/sum(Ai)/sum(ri)/sum(ri)
     return F_M_y
 
 
@@ -39,14 +40,22 @@ def get_r_i(x, z):
     return r
 
 
-# decompose F_cg into F_cgx and F_cgz
-A_i = []
-x_i = []
-z_i = []
-r_i = []  # radial distances of fasteners to fast_cg, from Luke or calculate?
-for i in range(A_i.__len__()):
-    r_i.append(get_r_i((x_i[i], z_i[i])))
+# retrieve loads
+F_x = 10
+F_z = 0
+M_y = 0  # TODO: M_y needs to be calculated
 
-get_F_x()
-get_F_z()
-get_F_M_y()
+# retrieve fastener data
+A_i = [2, 2, 2, 2]
+x_i = [1, -1, -1, 1]
+z_i = [1, 1, -1, -1]
+r_i = []  # radial distances of fasteners to fast_cg
+
+# calculate
+get_F_x(F_x)  # force per fastener
+get_F_z(F_z)  # force per fastener
+for i in range(A_i.__len__()):
+    r_i.append(get_r_i(x_i[i], z_i[i]))  # determine radial distances
+for i in range(A_i.__len__()):
+    get_F_M_y(M_y, A_i[i], r_i[i], A_i, r_i)  # determine moment per fastener
+# The three functions give forces and moment per fastener
