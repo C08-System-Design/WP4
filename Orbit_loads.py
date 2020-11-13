@@ -1,7 +1,7 @@
 'Determination of the launch loads'
 def orbitloads():
     import numpy as np
-    'Set uo the given data'
+    'Set up the given data'
 
     omega = 1 #deg/s
     CMG_torque = 45 #Nm
