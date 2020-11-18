@@ -1,11 +1,11 @@
-Al7705_T6 = \
+A7705_T6 = \
     {"rho": 2.81,  # Density in kg/m^3
      "E": 71.7,  # Young's modulus in GPa
      "sigma_ult": 510,  # Ultimate tensile strength in MPa
      "sigma_y": 430,  # Yield strength in MPa
      }
 
-Al6061_T6 = \
+A6061_T6 = \
     {"rho": 2.7,  # Density in kg/m^3
      "E": 69,  # Young's modulus in GPa
      "sigma_ult": 310,  # Ultimate tensile strength in MPa
@@ -19,7 +19,7 @@ Ti_6Al_4V = \
      "sigma_y": 880,  # Yield strength in MPa
      }
 
-mats = [Al7705_T6, Al6061_T6, Ti_6Al_4V]
+mats = [A7705_T6, A6061_T6, Ti_6Al_4V]
 
 """
 This code stores all defined materials (mats) in a list called mats.
@@ -27,7 +27,7 @@ Items in this list are dictionaries containing properties of a single material.
 To get these properties, use the .get method with argument being your property.
 For example:
 """
-Al7705_T6.get("rho")
+A7705_T6.get("rho")
 """
 To iterate over the list of all materials, you do the following:
 """
