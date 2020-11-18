@@ -1,4 +1,5 @@
 from fast_loads import *
 
-print(M_y)
-print("test change")
+sigma_br = P_i*D_2*t_2
+# get bearing allowable - different for every material
+

@@ -10,6 +10,7 @@ F_cg is a vector sum of loads F_x and F_z determined previously
 """
 
 from math import sqrt
+from launch_loads import *  # retrieve loads
 
 
 def get_F_cg(Fx, Fz):
@@ -40,10 +41,8 @@ def get_r_i(x, z):
     return r
 
 
-# retrieve loads
-F_x = 10
-F_z = 0
 M_y = 0  # TODO: M_y needs to be calculated
+# there will not be any moment as everything is symmetric
 
 # retrieve fastener data
 A_i = [2, 2, 2, 2]
