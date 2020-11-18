@@ -51,8 +51,8 @@ z_i = [1, 1, -1, -1]
 r_i = []  # radial distances of fasteners to fast_cg
 
 # calculate
-get_F_x(F_x)  # force per fastener
-get_F_z(F_z)  # force per fastener
+F_xi = get_F_x(F_x)  # force per fastener
+F_zi = get_F_z(F_z)  # force per fastener
 for i in range(A_i.__len__()):
     r_i.append(get_r_i(x_i[i], z_i[i]))  # determine radial distances
 for i in range(A_i.__len__()):
