@@ -19,14 +19,14 @@ def get_F_cg(Fx, Fz):
 
 def get_F_x(F):  # F = F_cgx 
     n = A_i.__len__()  # number of fasteners
-    F_x = F/n
-    return F_x
+    Fx = F/n
+    return Fx
 
 
 def get_F_z(F):  # F = F_cgz 
     n = A_i.__len__()  # number of fasteners
-    F_z = F/n
-    return F_z
+    Fz = F/n
+    return Fz
 
 
 def get_F_M_y(M, A, r, Ai, ri):  # M is moment, A is A_f, Ai and ri are lists
