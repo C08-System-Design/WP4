@@ -1,4 +1,4 @@
-from fast_loads.py import A_i, x_i, z_i, r_i
+from fast_loads import A_i, x_i, z_i, r_i
 from  import Mz, Nf, Fy
 
 def get_Fpi(Fy, Nf): #eq 4.6
