@@ -3,6 +3,7 @@ A7705_T6 = \
      "E": 71.7,  # Young's modulus in GPa
      "sigma_ult": 510,  # Ultimate tensile strength in MPa
      "sigma_y": 430,  # Yield strength in MPa
+     "bearing_allowable": 0,  # Bearing strength of the material
      }
 
 A6061_T6 = \
@@ -10,6 +11,7 @@ A6061_T6 = \
      "E": 69,  # Young's modulus in GPa
      "sigma_ult": 310,  # Ultimate tensile strength in MPa
      "sigma_y": 270,  # Yield strength in MPa
+     "bearing_allowable": 0,  # Bearing strength of the material
      }
 
 Ti_6Al_4V = \
@@ -17,6 +19,7 @@ Ti_6Al_4V = \
      "E": 104,  # Young's modulus in GPa
      "sigma_ult": 900,  # Ultimate tensile strength in MPa
      "sigma_y": 880,  # Yield strength in MPa
+     "bearing_allowable": 0,  # Bearing strength of the material
      }
 
 mats = [A7705_T6, A6061_T6, Ti_6Al_4V]
