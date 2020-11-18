@@ -1,5 +1,6 @@
 from mat import pi
 from push_check.py import max_Fyi
+from  import Nf
 
 def get_sigma (Fy, A_zx):
     sigma_xz = Fy / A_zx  # normal stress due to Fyi
@@ -10,7 +11,6 @@ def get_tau (Fy, A_y):
     return tau_y
 
 Fy = max_Fyi #use maximum loaded fastener
-Nf =
 D_fo =
 D_fi =
 t2 =   #thickness from spacecraft wall
