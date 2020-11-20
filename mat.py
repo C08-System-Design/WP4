@@ -1,5 +1,5 @@
 A7705_T6 = \
-    {"rho": 2.81,  # Density in kg/m^3
+    {"rho": 2810,  # Density in kg/m^3
      "E": 71.7,  # Young's modulus in GPa
      "sigma_ult": 510,  # Ultimate tensile strength in MPa
      "sigma_y": 430,  # Yield strength in MPa
@@ -7,7 +7,7 @@ A7705_T6 = \
      }
 
 A6061_T6 = \
-    {"rho": 2.7,  # Density in kg/m^3
+    {"rho": 2700,  # Density in kg/m^3
      "E": 69,  # Young's modulus in GPa
      "sigma_ult": 310,  # Ultimate tensile strength in MPa
      "sigma_y": 270,  # Yield strength in MPa
@@ -15,10 +15,18 @@ A6061_T6 = \
      }
 
 Ti_6Al_4V = \
-    {"rho": 4.5,  # Density in kg/m^3
+    {"rho": 4500,  # Density in kg/m^3
      "E": 104,  # Young's modulus in GPa
      "sigma_ult": 900,  # Ultimate tensile strength in MPa
      "sigma_y": 880,  # Yield strength in MPa
+     "alpha":   ,   #thermal exp coef
+     }
+
+Steel = \
+    {"rho": 7800,  # Density in kg/m^3
+     "E": 207,  # Young's modulus in GPa
+     "sigma_ult": ,  # Ultimate tensile strength in MPa
+     "sigma_y": ,  # Yield strength in MPa
      "alpha":   ,   #thermal exp coef
      }
 
