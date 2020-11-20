@@ -41,6 +41,19 @@ def combine(x, y):  # x and y are lists, the function gives any combination
     return comb
 
 
+def gen_meshes(Ds, Dmults, mesh):
+    c = 0
+    for size in mesh:  # size[0] = w , size[1] = h
+        for i in Ds:
+            for j in Dmults:
+                c += 1
+                print("Iteration:", c)
+                if 1.5*i+j*i <= size[0]/2:
+                    print(gen_mesh(i, j, size[0], size[1]))
+                # else:
+                # print("Your D is too big :O ")
+
+
 # we start at [0 ,0] = the origin
 # after we are done with the mesh we cut off all the outer points
 # because no fastener can be at the edge of the lug
@@ -82,16 +95,6 @@ while w_i <= wrange and h_i <= hrange:
     h_i += 1000*size_stp
     h_i = h_i/1000
 sizes = combine(w, h)
-c = 0
-for size in sizes:  # size[0] = w , size[1] = h
-    for i in D:
-        for j in D_mult:
-            c += 1
-            print("Iteration:", c)
-            if 1.5*i+j*i <= size[0]/2:
-                print(gen_mesh(i, j, size[0], size[1]))
-            # else:
-                # print("Your D is too big :O ")
 
-# print(gen_mesh(0.1, 2, 0.6, 0.6)[0])
-# print(gen_mesh(0.1, 2, 6, 4)[1])
+gen_meshes(D, D_mult, sizes)
+# current configuration runs through ~3000 iterations
