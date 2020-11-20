@@ -26,15 +26,22 @@ for rows in range(1,4):
             for i in range(1, rows):
                 z_i.append(z_i[i - 1] + c2c * D_z)
             z_i_per = [i / plate_width for i in z_i]
+            z_i = [round(i, 2) for i in z_i]
 
             x_j = [UL-c_to_e*D_x+0.5*h+t_1*(1+t_1_margin)]
             for j in range(1, cols):
                 x_j.append(x_j[j - 1] - c2c * D_x)
             x_j_per = [j / (0.5*plate_length) for j in x_j]
+            x_j = [round(i,2) for i in x_j]
 
 
-            print rows,cols,c2c,D_z,D_x
-            print z_i
-            print z_i_per
-            print x_j
-            print x_j_per
+            #print rows,cols,c2c,D_z,D_x
+            #print ("z_i",z_i)
+            #print z_i_per
+            #print ("x_j",x_j)
+            #print x_j_per
+            print (rows,"rows",cols, "columns")
+            print ('diameter = ', D, "margin =", c2c)
+            print ("z_i",z_i)
+            print ("x_j",x_j)
+
