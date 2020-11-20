@@ -77,15 +77,13 @@ while w_i < wrange and h_i < hrange:
     w_i += size_stp
     h_i += size_stp
 sizes = combine(w, h)
-print(D)
-print(D_mult)
-for size in sizes:  # size[0] = w , size[1] = h
-    for i in D:
-        for j in D_mult:
-            if 1.5*i+j*i <= size[0]/2:
-                print(gen_mesh(i, j, size[0], size[1]))
-            # else:
-                # print("Your D is too big :O ")
+# for size in sizes:  # size[0] = w , size[1] = h
+#     for i in D:
+#         for j in D_mult:
+#             if 1.5*i+j*i <= size[0]/2:
+#                 print(gen_mesh(i, j, size[0], size[1]))
+#             # else:
+#                 # print("Your D is too big :O ")
 
 # print(gen_mesh(0.1, 2, 0.6, 0.6)[0])
 # print(gen_mesh(0.1, 2, 6, 4)[1])
