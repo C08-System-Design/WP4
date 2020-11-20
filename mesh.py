@@ -98,3 +98,4 @@ sizes = combine(w, h)
 
 gen_meshes(D, D_mult, sizes)
 # current configuration runs through ~3000 iterations
+# will need to rule out all the options near the attach
