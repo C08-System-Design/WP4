@@ -10,7 +10,6 @@ def forceratio(E_a,E_b):
     D_fo = #outer diam of fast
     D_fi = #outer diam of fast
     t = #thickness of ...
-    E_a = #young's mod of attachment mechanism
 
 
     '''Calc of attachment compliance'''
@@ -21,7 +20,6 @@ def forceratio(E_a,E_b):
 
     #Variables for Compliance of fastener 
 
-    E_b = #youngs mod of fast mat
     d = #diameter of head/nut
     A_sha1 = #cross-sect area of shank 1
     A_sha2 = 0 #cross-sect area of shank 2
