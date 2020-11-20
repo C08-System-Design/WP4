@@ -71,15 +71,22 @@ w_i = 0+size_stp  # can't start with a zero
 h_i = 0+size_stp  # can't start with a zero
 w = []
 h = []
-while w_i < wrange and h_i < hrange:
+while w_i <= wrange and h_i <= hrange:
     w.append(w_i)
     h.append(h_i)
-    w_i += size_stp
-    h_i += size_stp
+    w_i = 1000*w_i
+    w_i += 1000*size_stp
+    w_i = w_i/1000
+    h_i = 1000*h_i
+    h_i += 1000*size_stp
+    h_i = h_i/1000
 sizes = combine(w, h)
+# c = 0
 # for size in sizes:  # size[0] = w , size[1] = h
 #     for i in D:
 #         for j in D_mult:
+#             c += 1
+#             print(c)
 #             if 1.5*i+j*i <= size[0]/2:
 #                 print(gen_mesh(i, j, size[0], size[1]))
 #             # else:
