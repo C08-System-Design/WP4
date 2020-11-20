@@ -1,7 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="8730b3e8-7a30-4ba1-b7e4-3471c709e111" name="Default Changelist" comment="" />
+    <list default="true" id="8730b3e8-7a30-4ba1-b7e4-3471c709e111" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pattern_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/pattern_test.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -26,7 +47,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
-  <component name="RunManager" selected="Python.Lug_dim">
+  <component name="RunManager" selected="Python.pattern_test">
     <configuration name="4.4" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="WP4" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -48,7 +69,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Lug_dim" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="pattern" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="WP4" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -60,7 +81,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Lug_dim.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/pattern.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -69,7 +90,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="launch_loads" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="pattern_test" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="WP4" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -81,7 +102,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/launch_loads.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/pattern_test.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -92,8 +113,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.Lug_dim" />
-        <item itemvalue="Python.launch_loads" />
+        <item itemvalue="Python.pattern_test" />
+        <item itemvalue="Python.pattern" />
         <item itemvalue="Python.4.4" />
       </list>
     </recent_temporary>
@@ -109,30 +130,77 @@
     </task>
     <servers />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
   <component name="WindowStateProjectService">
-    <state width="1515" height="210" key="GridCell.Tab.0.bottom" timestamp="1605716113238">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="1379" height="309" key="GridCell.Tab.0.bottom" timestamp="1605862750813">
+      <screen x="0" y="23" width="1792" height="1024" />
     </state>
-    <state width="1515" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1605716113238" />
+    <state width="1379" height="309" key="GridCell.Tab.0.bottom/0.23.1792.1024@0.23.1792.1024" timestamp="1605721430209" />
+    <state width="1379" height="309" key="GridCell.Tab.0.bottom/1792.-806.3200.1777/0.23.1792.1024@0.23.1792.1024" timestamp="1605862750813" />
     <state width="1771" height="318" key="GridCell.Tab.0.bottom/1792.-829.3200.1800/0.0.1792.1120@0.0.1792.1120" timestamp="1605267023019" />
-    <state width="1515" height="210" key="GridCell.Tab.0.center" timestamp="1605716113238">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="1379" height="309" key="GridCell.Tab.0.center" timestamp="1605862750813">
+      <screen x="0" y="23" width="1792" height="1024" />
     </state>
-    <state width="1515" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1605716113238" />
+    <state width="1379" height="309" key="GridCell.Tab.0.center/0.23.1792.1024@0.23.1792.1024" timestamp="1605721430209" />
+    <state width="1379" height="309" key="GridCell.Tab.0.center/1792.-806.3200.1777/0.23.1792.1024@0.23.1792.1024" timestamp="1605862750813" />
     <state width="1771" height="318" key="GridCell.Tab.0.center/1792.-829.3200.1800/0.0.1792.1120@0.0.1792.1120" timestamp="1605267023017" />
-    <state width="1515" height="210" key="GridCell.Tab.0.left" timestamp="1605716113238">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="1379" height="309" key="GridCell.Tab.0.left" timestamp="1605862750812">
+      <screen x="0" y="23" width="1792" height="1024" />
     </state>
-    <state width="1515" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1605716113238" />
+    <state width="1379" height="309" key="GridCell.Tab.0.left/0.23.1792.1024@0.23.1792.1024" timestamp="1605721430209" />
+    <state width="1379" height="309" key="GridCell.Tab.0.left/1792.-806.3200.1777/0.23.1792.1024@0.23.1792.1024" timestamp="1605862750812" />
     <state width="1771" height="318" key="GridCell.Tab.0.left/1792.-829.3200.1800/0.0.1792.1120@0.0.1792.1120" timestamp="1605267023017" />
-    <state width="1515" height="210" key="GridCell.Tab.0.right" timestamp="1605716113238">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="1379" height="309" key="GridCell.Tab.0.right" timestamp="1605862750813">
+      <screen x="0" y="23" width="1792" height="1024" />
     </state>
-    <state width="1515" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1605716113238" />
+    <state width="1379" height="309" key="GridCell.Tab.0.right/0.23.1792.1024@0.23.1792.1024" timestamp="1605721430209" />
+    <state width="1379" height="309" key="GridCell.Tab.0.right/1792.-806.3200.1777/0.23.1792.1024@0.23.1792.1024" timestamp="1605862750813" />
     <state width="1771" height="318" key="GridCell.Tab.0.right/1792.-829.3200.1800/0.0.1792.1120@0.0.1792.1120" timestamp="1605267023018" />
+    <state width="1379" height="339" key="GridCell.Tab.1.bottom" timestamp="1605721430205">
+      <screen x="0" y="23" width="1792" height="1024" />
+    </state>
+    <state width="1379" height="339" key="GridCell.Tab.1.bottom/0.23.1792.1024@0.23.1792.1024" timestamp="1605721430205" />
+    <state width="1379" height="339" key="GridCell.Tab.1.center" timestamp="1605721430204">
+      <screen x="0" y="23" width="1792" height="1024" />
+    </state>
+    <state width="1379" height="339" key="GridCell.Tab.1.center/0.23.1792.1024@0.23.1792.1024" timestamp="1605721430204" />
+    <state width="1379" height="339" key="GridCell.Tab.1.left" timestamp="1605721430204">
+      <screen x="0" y="23" width="1792" height="1024" />
+    </state>
+    <state width="1379" height="339" key="GridCell.Tab.1.left/0.23.1792.1024@0.23.1792.1024" timestamp="1605721430204" />
+    <state width="1379" height="339" key="GridCell.Tab.1.right" timestamp="1605721430204">
+      <screen x="0" y="23" width="1792" height="1024" />
+    </state>
+    <state width="1379" height="339" key="GridCell.Tab.1.right/0.23.1792.1024@0.23.1792.1024" timestamp="1605721430204" />
+    <state x="692" y="280" key="Vcs.Push.Dialog.v2" timestamp="1605704767034">
+      <screen x="0" y="23" width="1792" height="1024" />
+    </state>
+    <state x="692" y="280" key="Vcs.Push.Dialog.v2/0.23.1792.1024@0.23.1792.1024" timestamp="1605704767034" />
     <state x="561" y="251" width="670" height="676" key="search.everywhere.popup" timestamp="1605265189005">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state x="561" y="251" width="670" height="676" key="search.everywhere.popup/1792.-829.3200.1800/0.0.1792.1120@0.0.1792.1120" timestamp="1605265189005" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/4.4.py</url>
+          <line>16</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
