@@ -14,5 +14,5 @@ def load(m, g, Load, FLL):
 long_force = load(m, g, long_load, FLL)     # Longitudinal Force
 lat_force = load(m, g, lat_load, FLL)       # Lateral Force
 
-print(long_force)
+# print(long_force)
 # print(lat_force)
