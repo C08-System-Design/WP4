@@ -8,12 +8,13 @@ get area
 get x_cg , z_cg
 """
 from pattern import configs, D
+from math import pi
 # configs is a list with lists (configurations) containing two lists (x_i, z_i)
 # D is diameter of fasteners, all fasteners have the same diameter
 
 
 def get_A_f(D):  # area of a fastener
-    A = D**2/4
+    A = pi*D**2/4
     return A
 
 
@@ -45,7 +46,6 @@ for config in configs:
 
     cgs_x.append(round(get_x_cg(A_i, x_i), 3))
     cgs_z.append(round(get_z_cg(A_i, z_i), 3))
+    print(config)
     # important to maintain order! A_i correspond to x_i and z_i
     # if we select different fasteners, does area scale with mass appropriately
-print(cgs_x)
-print(cgs_z)

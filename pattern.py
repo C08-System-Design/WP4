@@ -34,6 +34,10 @@ for rows in range(1,4):
             x_j_2 = x_j  # list of x coordinates on both sides
             for x in range(x_j_2.__len__()):  # gives the x coordinates minuses
                 x_j_2.append(-x_j_1[x])
+            z_i_1 = z_i
+            z_i_2 = z_i
+            for z in range(z_i_1.__len__()):  # gives the x coordinates minuses
+                z_i_2.append(z_i_1[z])
             # print rows,cols,c2c,D_z,D_x
             # print ("z_i",z_i)
             # print z_i_per
@@ -42,5 +46,7 @@ for rows in range(1,4):
             # print(rows,"rows",cols, "columns")
             # print('diameter = ', D, "margin =", c2c)
             # print("z_i", z_i)
-            # print("x_j", x_j)
-            configs.append([x_j_2, z_i])
+            # print("x_j", x_j
+            print("x:", x_j_2)
+            print("z:", z_i_2)
+            configs.append([x_j_2, z_i_2])

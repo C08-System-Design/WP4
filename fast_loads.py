@@ -9,8 +9,9 @@ n_f is the number of fasteners
 F_cg is a vector sum of loads F_x and F_z determined previously
 """
 
-from math import sqrt
+from math import sqrt, pi
 from launch_loads import *  # retrieve loads
+from pattern import configs, D
 
 
 def get_F_cg(Fx, Fz):
@@ -43,18 +44,23 @@ def get_r_i(x, z):
 
 M_y = 0  # TODO: M_y needs to be calculated, check
 # there will not be any moment as everything is symmetric
+for config in configs:
+    # retrieve fastener data
+    x_i = config[0]
+    z_i = config[1]
+    A_i = []
+    print(x_i)
+    print(z_i)
+    for i in range(len(x_i)):
+        A_i.append(pi*D**2/4)
 
-# retrieve fastener data
-A_i = [2, 2, 2, 2]
-x_i = [1, -1, -1, 1]
-z_i = [1, 1, -1, -1]
-r_i = []  # radial distances of fasteners to fast_cg
+    # calculate
+    r_i = []  # radial distances of fasteners to fast_cg
+    F_xi = get_F_x(F_x)  # force per fastener
+    F_zi = get_F_z(F_z)  # force per fastener
+    for i in range(A_i.__len__()):
+        r_i.append(get_r_i(x_i[i], z_i[i]))  # determine radial distances
+    for i in range(A_i.__len__()):
+        get_F_M_y(M_y, A_i[i], r_i[i], A_i, r_i)  # determine moment per fast
+        # The three functions give forces and moment per fastener
 
-# calculate
-F_xi = get_F_x(F_x)  # force per fastener
-F_zi = get_F_z(F_z)  # force per fastener
-for i in range(A_i.__len__()):
-    r_i.append(get_r_i(x_i[i], z_i[i]))  # determine radial distances
-for i in range(A_i.__len__()):
-    get_F_M_y(M_y, A_i[i], r_i[i], A_i, r_i)  # determine moment per fastener
-# The three functions give forces and moment per fastener
