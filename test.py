@@ -1,9 +1,10 @@
-D = []  # list of diameters over which we shall iterate
-D_min = 1e-2  # [m]
-D_max = 2e-2  # [m]
-dD = 1e-3  # step in D
-while D_min <= D_max:
-    D.append(D_min)
-    D_min += dD
+import itertools
 
-print(D)
+lst = [1, 2, 3]
+all_combs = []
+
+for r in range(len(lst) + 1):
+    combs_object = itertools.combinations(lst, r)
+    combs_lst = list(combs_object)
+    all_combs += combs_lst
+print(all_combs)

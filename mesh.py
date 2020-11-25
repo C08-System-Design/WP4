@@ -6,6 +6,7 @@
 # that quadrant will then copy all its fastener iterations symmetrically
 # two constraints: distance from the edge is 1.5D
 # horizontal (or vertical) distance is 2-3D between two fasteners
+import itertools
 
 
 def gen_mesh(x, y, m, n):
@@ -51,7 +52,7 @@ def gen_meshes(Ds, Dmults, s):  # s = sizes
                 # print("Iteration:", c)
                 if 1.5*i+j*i <= size[0]/2:
                     # print(gen_mesh(i, j, size[0], size[1]))
-                    print(gen_mesh(i, j, size[0], size[1]).__len__(),"points")
+                    # print(gen_mesh(i, j, size[0], size[1]).__len__(),"points")
                     meshes.append(gen_mesh(i, j, size[0], size[1]))
                     # c += 1
                     # print(c)  # counts how many meshes are generated
@@ -105,5 +106,3 @@ sizes = combine(w, h)
 # current configuration runs through ~3000 iterations
 # will need to rule out all the options near the attach
 opts = []  # options for fastener locations
-for mesh in gen_meshes(D, D_mult, sizes):
-    print("filler")
