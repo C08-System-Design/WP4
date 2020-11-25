@@ -7,12 +7,14 @@ from launch_data import *
 
 m = 0.5 * m
 
+
 def load(m, g, Load, FLL):
     force = m * g * Load * FLL
     return force
 
-long_force = load(m, g, long_load, FLL)     # Longitudinal Force
-lat_force = load(m, g, lat_load, FLL)       # Lateral Force
 
-# print(long_force)
-# print(lat_force)
+F_z = load(m, g, long_load, FLL)     # Longitudinal Force
+F_x = load(m, g, lat_load, FLL)       # Lateral Force
+
+print(F_z)
+print(F_x)

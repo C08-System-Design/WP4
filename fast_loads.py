@@ -10,6 +10,7 @@ F_cg is a vector sum of loads F_x and F_z determined previously
 """
 
 from math import sqrt
+from launch_loads import *  # retrieve loads
 
 
 def get_F_cg(Fx, Fz):
@@ -19,14 +20,14 @@ def get_F_cg(Fx, Fz):
 
 def get_F_x(F):  # F = F_cgx 
     n = A_i.__len__()  # number of fasteners
-    F_x = F/n
-    return F_x
+    Fx = F/n
+    return Fx
 
 
 def get_F_z(F):  # F = F_cgz 
     n = A_i.__len__()  # number of fasteners
-    F_z = F/n
-    return F_z
+    Fz = F/n
+    return Fz
 
 
 def get_F_M_y(M, A, r, Ai, ri):  # M is moment, A is A_f, Ai and ri are lists
@@ -40,10 +41,8 @@ def get_r_i(x, z):
     return r
 
 
-# retrieve loads
-F_x = 10
-F_z = 0
 M_y = 0  # TODO: M_y needs to be calculated
+# there will not be any moment as everything is symmetric
 
 # retrieve fastener data
 A_i = [2, 2, 2, 2]
@@ -52,8 +51,8 @@ z_i = [1, 1, -1, -1]
 r_i = []  # radial distances of fasteners to fast_cg
 
 # calculate
-get_F_x(F_x)  # force per fastener
-get_F_z(F_z)  # force per fastener
+F_xi = get_F_x(F_x)  # force per fastener
+F_zi = get_F_z(F_z)  # force per fastener
 for i in range(A_i.__len__()):
     r_i.append(get_r_i(x_i[i], z_i[i]))  # determine radial distances
 for i in range(A_i.__len__()):
