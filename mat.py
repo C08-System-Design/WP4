@@ -1,5 +1,5 @@
 
-A7705_T6 = \
+A7075_T6 = \
     {"rho": 2810,  # Density in kg/m^3
      "E": 71.7,  # Young's modulus in GPa
      "sigma_ult": 510,  # Ultimate tensile strength in MPa
@@ -39,7 +39,7 @@ Steel = \
      "alpha": 11.3*10^(-6),   #thermal exp coef in 1/K
      }
 
-mats = [A7705_T6, A6061_T6, Ti_6Al_4V, A2195-T84,Steel]
+mats = [A7075_T6, A6061_T6, Ti_6Al_4V, A2195-T84,Steel]
 
 """
 This code stores all defined materials (mats) in a list called mats.
