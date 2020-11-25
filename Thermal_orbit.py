@@ -44,9 +44,10 @@ def orbitloads_back_wall():
         E_b = mat.get("E")
         for DT in DT_list:
             F_minmax = solve((F * t_b) / (A * E_b) + (F * t_w) / (A * E_w) - alpha_b * DT * t_b - alpha_w * DT * t_w, F)
-            F_list.append(F_minmax)
+            F_list = F_list + F_minmax
+
         F_list_mat.append(F_list)
-        F_list.clear()
+        F_list = []
     return F_list_mat
 
 t_b = 0.002
