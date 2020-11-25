@@ -1,7 +1,7 @@
 from fast_loads import *
 from mat import *
 
-# sigma_br = P_i*D_2*t_2  # in-plane force * fast dia * lug_thickness
+# sigma_br = P_i/D_2/t_2  # in-plane force / fast dia / lug_thickness
 # get bearing allowable - different for every material
 # verify D_2 and t_2, can be reduced to optimize mass
 # do it for both the backup wall and spacecraft wall
