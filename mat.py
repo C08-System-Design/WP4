@@ -36,7 +36,7 @@ Steel = \
      "E": 207,  # Young's modulus in GPa
      "sigma_ult": 1140,  # Ultimate tensile strength in MPa
      "sigma_y": 827,  # Yield strength in MPa
-     "alpha": 11.3*10^(-6),   #thermal exp coef in 1/K
+     "alpha": 11.3*10**(-6),   #thermal exp coef in 1/K
      }
 
 mats = [A7075_T6, A6061_T6, Ti_6Al_4V, A2195-T84,Steel]
