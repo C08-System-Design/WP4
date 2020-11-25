@@ -41,7 +41,7 @@ def get_r_i(x, z):
     return r
 
 
-M_y = 0  # TODO: M_y needs to be calculated
+M_y = 0  # TODO: M_y needs to be calculated, check
 # there will not be any moment as everything is symmetric
 
 # retrieve fastener data
