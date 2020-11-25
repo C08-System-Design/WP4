@@ -30,13 +30,13 @@ A2195_T84 = \
      "sigma_y": 490,  # Yield strength in MPa
      "alpha": 22.7*10**(-6), # Strain per kelvin (guess for now) 
      }
-
+# NAISI Grade 18Ni (350) Maraging Steel
 Steel = \
     {"rho": 7800,  # Density in kg/m^3
      "E": 207,  # Young's modulus in GPa
-     "sigma_ult": ,  # Ultimate tensile strength in MPa
-     "sigma_y": ,  # Yield strength in MPa
-     "alpha": 13.3*10^(-6),   #thermal exp coef in 1/K
+     "sigma_ult": 1140,  # Ultimate tensile strength in MPa
+     "sigma_y": 827,  # Yield strength in MPa
+     "alpha": 11.3*10^(-6),   #thermal exp coef in 1/K
      }
 
 mats = [A7705_T6, A6061_T6, Ti_6Al_4V, A2195-T84,Steel]
