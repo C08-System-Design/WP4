@@ -49,8 +49,6 @@ for config in configs:
     x_i = config[0]
     z_i = config[1]
     A_i = []
-    print(x_i)
-    print(z_i)
     for i in range(len(x_i)):
         A_i.append(pi*D**2/4)
 
@@ -63,4 +61,5 @@ for config in configs:
     for i in range(A_i.__len__()):
         get_F_M_y(M_y, A_i[i], r_i[i], A_i, r_i)  # determine moment per fast
         # The three functions give forces and moment per fastener
-
+    print(F_xi)
+    print(F_zi)

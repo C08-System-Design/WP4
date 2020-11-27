@@ -39,13 +39,12 @@ cgs_z = []
 for config in configs:
     x_i = config[0]
     z_i = config[1]
-    D_i = [D]  # are all the same?
+    D_i = [config[2]]  # are all the same?
     A_i = []
     for i in D_i:
         A_i.append(get_A_f(i))
 
     cgs_x.append(round(get_x_cg(A_i, x_i), 3))
     cgs_z.append(round(get_z_cg(A_i, z_i), 3))
-    print(config)
     # important to maintain order! A_i correspond to x_i and z_i
     # if we select different fasteners, does area scale with mass appropriately
