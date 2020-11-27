@@ -30,10 +30,12 @@ for rows in range(1,4):
                 x_j.append(x_j[j - 1] - c2c * D_x)
             x_j_per = [j / (0.5*plate_length) for j in x_j]
             x_j = [round(i,2) for i in x_j]
-            for k in range(0, cols):
+
+
+            for k in range(0, cols):                                    #mirror column to other side
                 x_j.append(-x_j[cols - k-1])
             coor = []
-            for z_coor in z_i:
+            for z_coor in z_i:                                          #create coordinates list from column and row location
                 for x_coor in x_j:
                     coor.append([z_coor,x_coor])
             print(cols,"cols", rows,"rows each side")
