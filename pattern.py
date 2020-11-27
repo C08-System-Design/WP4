@@ -30,17 +30,19 @@ for rows in range(1,4):
                 x_j.append(x_j[j - 1] - c2c * D_x)
             x_j_per = [j / (0.5*plate_length) for j in x_j]
             x_j = [round(i,2) for i in x_j]
-            x_j_1 = x_j  # list of x coordinates on one side only
-            x_j_2 = x_j  # list of x coordinates on both sides
-            for x in range(x_j_2.__len__()):  # gives the x coordinates minuses
-                x_j_2.append(-x_j_1[x])
-            # print rows,cols,c2c,D_z,D_x
-            # print ("z_i",z_i)
-            # print z_i_per
-            # print ("x_j",x_j)
-            # print x_j_per
-            # print(rows,"rows",cols, "columns")
-            # print('diameter = ', D, "margin =", c2c)
-            # print("z_i", z_i)
-            # print("x_j", x_j)
-            configs.append([x_j_2, z_i])
+            for k in range(0, cols):
+                x_j.append(-x_j[cols - k-1])
+            coor = []
+            for z_coor in z_i:
+                for x_coor in x_j:
+                    coor.append([z_coor,x_coor])
+            print(cols,"cols", rows,"rows")
+            print ("c2c is",c2c)
+            print ("coor list (z,x)", coor)
+            print()
+
+
+
+
+            #print z_i
+            #print x_j
