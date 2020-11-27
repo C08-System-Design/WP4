@@ -42,17 +42,24 @@ for rows in range(1,4):
 
 
 
-            x_a = [i[1] for i in coor]
-            z_a = [i[0] for i in coor]
+            x_a = [i[1] for i in coor]              #x only list
+            z_a = [i[0] for i in coor]              #z only list
             k_a = [cols,rows,c2c]
             #print x_a
             #print z_a
-            config = [x_a,z_a,k_a]
+            config = [x_a,z_a,D,k_a]
             configs.append(config)
 
             #print(cols,"cols", rows,"rows each side")
             #print ("c2c is",c2c)
             #print ("D is", D)
             #print ("coor list (z,x)", coor)
-for i in range(0,18):
-    print configs[i][2]
+#for i in range(0,18):
+#    print configs[i][2]
+
+'''
+use configures[i][0] to get x only
+use configures[i][1] to get z only
+use configures[i][2] to get D
+use configures[i][3] to get [cols,rows,c2c]
+'''
