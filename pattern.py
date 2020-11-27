@@ -43,10 +43,10 @@ for rows in range(1,4):
             # print z_i_per
             # print ("x_j",x_j)
             # print x_j_per
-            # print(rows,"rows",cols, "columns")
-            # print('diameter = ', D, "margin =", c2c)
-            # print("z_i", z_i)
-            # print("x_j", x_j
-            print("x:", x_j_2)
-            print("z:", z_i_2)
+            print(rows,"rows",cols, "columns")
+            print('diameter = ', D, "margin =", c2c)
+            print("z_i", z_i)
+            print("x_j", x_j)
+            # print("x:", x_j_2)
+            # print("z:", z_i_2)
             configs.append([x_j_2, z_i_2])
