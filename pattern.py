@@ -8,7 +8,7 @@ c_to_e = 1.5        #centre to edge to hole diameter ratio
 n = 4               #fake value total number of holes always even number
 n_each = int(n/2)     #number of holes each side
 UL = 0.5*plate_length-(1+t_1_margin)*t_1-0.5*h
-
+configs = []
 
 for rows in range(1,4):
     for cols in range(1,4):
@@ -17,10 +17,7 @@ for rows in range(1,4):
             X_ratio = c_to_e+(cols-1)*c2c+0.5
             D_z = plate_width/Z_ratio
             D_x = UL/X_ratio
-            if D_z<=D_x:
-                D = D_z
-            else:
-                D = D_x
+            D = min(D_z, D_x)
 
             z_i = [-0.5 * plate_width + c_to_e * D_z]
             for i in range(1, rows):
@@ -33,15 +30,17 @@ for rows in range(1,4):
                 x_j.append(x_j[j - 1] - c2c * D_x)
             x_j_per = [j / (0.5*plate_length) for j in x_j]
             x_j = [round(i,2) for i in x_j]
-
-
-            #print rows,cols,c2c,D_z,D_x
-            #print ("z_i",z_i)
-            #print z_i_per
-            #print ("x_j",x_j)
-            #print x_j_per
-            print (rows,"rows",cols, "columns")
-            print ('diameter = ', D, "margin =", c2c)
-            print ("z_i",z_i)
-            print ("x_j",x_j)
-
+            x_j_1 = x_j  # list of x coordinates on one side only
+            x_j_2 = x_j  # list of x coordinates on both sides
+            for x in range(x_j_2.__len__()):  # gives the x coordinates minuses
+                x_j_2.append(-x_j_1[x])
+            # print rows,cols,c2c,D_z,D_x
+            # print ("z_i",z_i)
+            # print z_i_per
+            # print ("x_j",x_j)
+            # print x_j_per
+            # print(rows,"rows",cols, "columns")
+            # print('diameter = ', D, "margin =", c2c)
+            # print("z_i", z_i)
+            # print("x_j", x_j)
+            configs.append([x_j_2, z_i])
