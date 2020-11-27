@@ -4,12 +4,12 @@ import numpy as np
 #Material properties
 sigma_y = 510*10**6 #Mpa
 sigma_ult = 590*10**6 #MPa
-
 P_trans0 = 2644.8/2 #N, load per lug
 P_axial0 = 529/2 #N, per lug
 
 P_trans = P_trans0 *1.5
 P_axial = P_axial0 *1.5
+M_z = (1.05 + 0.03)* P_axial0
 
 K_ty = 0.5 #from graph
 
@@ -61,14 +61,34 @@ w_D1 = w_opt/D_opt
 
 print("t/D and w/D ratios are:", t_D1, w_D1)
 
+#check bending moment
+sigma_z = (M_z * t_opt / 2) / (1/12 * w_opt * t_opt**3)
+w_new = w_opt
+t_new = t_opt
+while sigma_z > sigma_y:
+    w_new = w_new + 0.0005
+    t_new = t_new + 0.0001
+    
+    sigma_z = (M_z * t_new / 2) / (1/12 * w_new * t_new**3)
+    
+print('Haaaaaaaaalloooooo', sigma_z)
+
+    
+#newly found values
+A_br = D_opt * t_new
+D_new = w_new / w_D1
+
+print("D is:", D_new, ",t is:",t_new, ",w is:",w_new)
 
 #Check axial loads
 #K values depend on t/D and w/D value --> choose correct one from graph
 #Should be > 264.5 N each
 
-P_tens = sigma_y * (w_opt - D_opt)*t_opt * 0.94
+P_tens = sigma_y * (w_new - D_new)*t_new * 0.94
 
 P_br = sigma_ult * 1.1 * A_br
+
+P_trans = A_br * sigma_y * K_ty
 
 Axial = [P_tens,P_br]
 
