@@ -40,3 +40,11 @@ x = 0.5*h + t_1
 
 sigma_y = M_x * z /I_xx +M_z * x /I_zz
 print(sigma_y/TYS)
+
+R_a = F_x / P_ty
+R_t = F_z / P_ty
+
+print (R_a**1.6 + R_t**1.6)
+MS = 1/((R_a**1.6 + R_t**1.6)**0.625) - 1
+
+print MS
