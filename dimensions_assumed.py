@@ -1,9 +1,10 @@
 '''Dimension determination'''
 import numpy as np
+from mat import *
 
-#Material properties
-sigma_y = 510*10**6 #Mpa
-sigma_ult = 590*10**6 #MPa
+#Material properties 
+sigma_y = A7075_T6.get("sigma_y")*10**6 #Pa
+sigma_ult = A7075_T6.get("sigma_ult")*10**6 #Pa
 P_trans0 = 2644.8/2 #N, load per lug
 P_axial0 = 529/2 #N, per lug
 
