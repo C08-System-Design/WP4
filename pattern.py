@@ -13,6 +13,7 @@ configs = []
 for rows in range(1,4):
     for cols in range(1,4):
         for c2c in c_to_c:
+            config = []
             Z_ratio = (rows-1) * c2c + 2 * c_to_e       #c2e D + c2c*D for each c2c + c2e D
             X_ratio = c_to_e+(cols-1)*c2c+0.5           #0.5 D+ c2c*D for each c2c + c2e D
             D_z = plate_width/Z_ratio
@@ -38,8 +39,28 @@ for rows in range(1,4):
             for z_coor in z_i:                                          #create coordinates list from column and row location
                 for x_coor in x_j:
                     coor.append([z_coor,x_coor])
-            print(cols,"cols", rows,"rows each side")
-            print ("c2c is",c2c)
-            print ("D is", D)
-            print ("coor list (z,x)", coor)
-            print
+
+
+
+            x_a = [i[1] for i in coor]              #x only list
+            z_a = [i[0] for i in coor]              #z only list
+            k_a = [cols,rows,c2c]
+            #print x_a
+            #print z_a
+            config = [x_a,z_a,D,k_a]
+            configs.append(config)
+
+            #print(cols,"cols", rows,"rows each side")
+            #print ("c2c is",c2c)
+            #print ("D is", D)
+            #print ("coor list (z,x)", coor)
+#for i in range(0,18):
+#    print configs[i][2]
+
+'''
+use configs[i][0] to get x only
+use configs[i][1] to get z only
+use configs[i][2] to get D
+use configs[i][3] to get [cols,rows,c2c]
+i in rage [0,17] as total 18 entry
+'''
