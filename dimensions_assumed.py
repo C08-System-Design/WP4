@@ -97,9 +97,11 @@ Axial = [P_tens,P_br]
 
 #Margin of safety
 
-MS = (1 /(((P_axial0/(min(Axial)))**1.6 + (P_trans0/P_trans)**1.6))**0.623) - 1
+MS_obl = (1 /(((P_axial0/(min(Axial)))**1.6 + (P_trans0/P_trans)**1.6))**0.623) - 1
+MS_bend = (sigma_y / sigma_z) - 1
 
-print(MS)
+print(MS_obl)
+print(MS_bend)
 
 
 
