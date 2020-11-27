@@ -14,14 +14,14 @@ from sympy import *
 #thermal loads in fastener because of lugs
 
 def orbitloads_lug_fast():
-    DT_plus = 103 - 288.15
-    DT_min = 396 - 288.15
+    DT_neg = 103 - 288.15
+    DT_pos = 396 - 288.15
 
     #thermally induced load
-    F_Tplus = (alpha_c - alpha_b) * DT_plus * E_b * A_sm * (1-phi)
-    F_Tmin =  (alpha_c - alpha_b) * DT_min * E_b * A_sm * (1-phi)
+    F_Tpos = (alpha_c - alpha_b) * DT_pos * E_b * A_sm * (1-phi)
+    F_Tneg =  (alpha_c - alpha_b) * DT_neg * E_b * A_sm * (1-phi)
 
-    return F_Tplus, F_Tmin
+    return F_Tpos, F_Tneg
 
 
 
@@ -35,9 +35,9 @@ def orbitloads_lug_fast():
 def orbitloads_back_wall():
     F_list_mat = []
     F_list = []
-    DT_plus = 103 - 288.15
-    DT_min = 396 - 288.15
-    DT_list = [DT_plus, DT_min]
+    DT_neg = 103 - 288.15
+    DT_pos = 396 - 288.15
+    DT_list = [DT_pos, DT_neg]
     F = Symbol("F")
     for mat in mats:
         alpha_b = mat.get("alpha")
