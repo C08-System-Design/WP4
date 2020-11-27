@@ -58,8 +58,10 @@ for rows in range(1,4):
 #    print configs[i][2]
 
 '''
-use configures[i][0] to get x only
-use configures[i][1] to get z only
-use configures[i][2] to get D
-use configures[i][3] to get [cols,rows,c2c]
+use configs[i][0] to get x only
+use configs[i][1] to get z only
+use configs[i][2] to get D
+use configs[i][3] to get [cols,rows,c2c]
+i in rage [0,17] as total 18 entry
 '''
+print configs[17][3]
