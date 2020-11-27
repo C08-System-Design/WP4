@@ -64,4 +64,3 @@ use configs[i][2] to get D
 use configs[i][3] to get [cols,rows,c2c]
 i in rage [0,17] as total 18 entry
 '''
-print configs[17][3]
