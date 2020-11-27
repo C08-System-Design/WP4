@@ -2,8 +2,8 @@
 A7075_T6 = \
     {"rho": 2810,  # Density in kg/m^3
      "E": 71.7,  # Young's modulus in GPa
-     "sigma_ult": 510,  # Ultimate tensile strength in MPa
-     "sigma_y": 430,  # Yield strength in MPa
+     "sigma_ult": 590,  # Ultimate tensile strength in MPa
+     "sigma_y": 510,  # Yield strength in MPa
      "alpha": 22.0*10**(-6), # strain per kelvin (@RT)
      }
 
