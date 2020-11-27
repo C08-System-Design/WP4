@@ -60,7 +60,6 @@ print("Optimal D is:", D_opt, ",optimal t is:",t_opt, ",optimal w is:",w_opt)
 t_D1 = t_opt/D_opt
 w_D1 = w_opt/D_opt
 
-print("t/D and w/D ratios are:", t_D1, w_D1)
 
 #check bending moment
 sigma_z = (M_z * t_opt / 2) / (1/12 * w_opt * t_opt**3)
@@ -79,10 +78,13 @@ print('Haaaaaaaaalloooooo', sigma_z)
 A_br = D_opt * t_new
 D_new = w_new / w_D1
 
+t_Dnew = t_new/D_new
+
+print("t/D and w/D ratios are:", t_Dnew, w_D1)
 print("D is:", D_new, ",t is:",t_new, ",w is:",w_new)
 
 #Check axial loads
-#K values depend on t/D and w/D value --> choose correct one from graph
+#K values depend on t/D and w/D value --> choose correct one from graph based on w/D and t/D
 #Should be > 264.5 N each
 
 P_tens = sigma_y * (w_new - D_new)*t_new * 0.94
@@ -95,9 +97,11 @@ Axial = [P_tens,P_br]
 
 #Margin of safety
 
-MS = (1 /(((P_axial0/(min(Axial)))**1.6 + (P_trans0/P_trans)**1.6))**0.623) - 1
+MS_obl = (1 /(((P_axial0/(min(Axial)))**1.6 + (P_trans0/P_trans)**1.6))**0.623) - 1
+MS_bend = (sigma_y / sigma_z) - 1
 
-print(MS)
+print(MS_obl)
+print(MS_bend)
 
 
 
