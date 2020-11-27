@@ -10,7 +10,7 @@ P_axial0 = 529/2 #N, per lug
 
 P_trans = P_trans0 *1.5
 P_axial = P_axial0 *1.5
-M_z = (1.05 + 0.03)* P_axial0
+M_z = (0.6 + 0.03)* P_axial0
 
 K_ty = 0.5 #from graph
 
@@ -75,12 +75,14 @@ print('Haaaaaaaaalloooooo', sigma_z)
 
     
 #newly found values
-A_br = D_opt * t_new
 D_new = w_new / w_D1
 
 t_Dnew = t_new/D_new
 
-print("t/D and w/D ratios are:", t_Dnew, w_D1)
+A_br = D_new * t_new
+
+
+print("t/D and w/D ratios are:", t_Dnew,w_D1)
 print("D is:", D_new, ",t is:",t_new, ",w is:",w_new)
 
 #Check axial loads
