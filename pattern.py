@@ -36,8 +36,9 @@ for rows in range(1,4):
             for z_coor in z_i:
                 for x_coor in x_j:
                     coor.append([z_coor,x_coor])
-            print(cols,"cols", rows,"rows")
+            print(cols,"cols", rows,"rows each side")
             print ("c2c is",c2c)
+            print ("D is", D)
             print ("coor list (z,x)", coor)
             print()
 
