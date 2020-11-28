@@ -29,14 +29,15 @@ def orbitloads_lug_fast():
 # Assumptions: Looked at this as a cylinder of two materials constrained by two walls (see MoM Problem 4-68)
 # (F * t_b)/(A * E_b) + (F * t_w)/(A * E_w) = alpha_b * DT * t_b + alpha_w * DT * t_w
 # t = thickness, A = contact surface, E = Young, alpha= thermal expansion coef, DT = difference in temp, _b = backplate, _w = wall
-
-
+# Fill these values in in SI units (IE: Meters and stuff
+# The function returns a list with lists in it. Each sublist is a different material. The first entry in the sublist is the load for the positive temperature change
+# and the second entry is the load for the negative temperature change
 
 def orbitloads_back_wall():
     F_list_mat = []
     F_list = []
-    DT_neg = 103 - 288.15
     DT_pos = 396 - 288.15
+    DT_neg = 103 - 288.15
     DT_list = [DT_pos, DT_neg]
     F = Symbol("F")
     for mat in mats:
@@ -45,7 +46,6 @@ def orbitloads_back_wall():
         for DT in DT_list:
             F_minmax = solve((F * t_b) / (A * E_b) + (F * t_w) / (A * E_w) - alpha_b * DT * t_b - alpha_w * DT * t_w, F)
             F_list = F_list + F_minmax
-
         F_list_mat.append(F_list)
         F_list = []
     return F_list_mat
