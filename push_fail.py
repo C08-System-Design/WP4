@@ -48,8 +48,3 @@ for config in configs:
     # print("Shear stress in the backplate:", tau_y_2/1e6, "MPa")
     # print("Shear stress in the spacecraft wall:", tau_y_3/1e6, "MPa")
     # print("-----------------------------")
-
-
-
-
-
