@@ -12,5 +12,3 @@ from mat import *
 # import lug geometry and fast dia
 # setup wall geometry
 t_wall = 0.01  # [m]
-E = mat.get("E")
-print(E)

@@ -1,4 +1,3 @@
-
 A7075_T6 = \
     {"rho": 2810,  # Density in kg/m^3
      "E": 71.7,  # Young's modulus in GPa
