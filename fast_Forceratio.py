@@ -1,6 +1,3 @@
-"""
-Force ratio calculation
-"""
 from push_fail import *
 from mat import *
 import numpy as np
@@ -35,9 +32,25 @@ def forceratio(E_a, E_b, t, D_fo, D_fi):
     return phi
 
 
-for config in configs:
-    forceratio(1, 2, 3, 4, 5)
-    print("testing")
+# thickness is taken from push_fail, assumed constant
+t_b = 0.001  # = t2
+t_w = 0.002  # = t3
 
-# forceratio(E_a, E_b, t_w)  # to asses force ratio of wall thickness
-# forceratio(E_a, E_b, t_b)  # to asses force ratio of backplate thickness
+# to asses force ratio of wall thickness
+phi_w = []  # force ratios for wall of every configuration
+for config in configs:
+    D_fo = config[2]+config[2]*0.4  # same as in push_fail.py, 0.4 is arbitrary
+    D_fi = config[2]
+    phi = forceratio(A2195_T84.get("E"), Steel.get("E"), t_w, D_fo, D_fi)
+    phi_w.append(phi)
+
+# to asses force ratio of backplate thickness
+phi_b = []  # force ratios for backplate of every configuration
+for config in configs:
+    D_fo = config[2]+config[2]*0.4  # same as in push_fail.py, 0.4 is arbitrary
+    D_fi = config[2]
+    phi = forceratio(A7075_T6.get("E"), Steel.get("E"), t_b, D_fo, D_fi)
+    phi_b.append(phi)
+
+print(phi_w)
+print(phi_b)
