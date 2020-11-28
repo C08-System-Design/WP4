@@ -42,7 +42,7 @@ Steel = \
      "alpha": 11.3*10**(-6),  # thermal exp coef in 1/K
      }
 
-mats = [A7075_T6, A6061_T6, Ti_6Al_4V, A2195_T84,Steel]
+mats = [A7075_T6, A6061_T6, Ti_6Al_4V, A2195_T84, Steel]
 
 """
 This code stores all defined materials (mats) in a list called mats.
