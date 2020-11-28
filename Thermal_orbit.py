@@ -55,8 +55,9 @@ A = 0.4
 E_w = 207 * 10**9
 t_w = 0.004
 alpha_w = 13.3 * 10**(-6)
-
-print(orbitloads_back_wall())
+Loads_therm = orbitloads_back_wall()
+print(Loads_therm)
+#print(orbitloads_back_wall())
 
 
 
