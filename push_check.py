@@ -34,7 +34,7 @@ for config in configs:
     max_Fyi.append(max(Fyi))
     # max_Fyi_index = Fyi.index(max_Fyi)
 
-print(max_Fyi)
+# print(max_Fyi)
 
 # print("the fastener with the highest load is on coordinates (x,z):"
 #       + xi[max_Fyi_index] + " , " + zi[max_Fyi_index])
