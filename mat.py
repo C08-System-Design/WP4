@@ -4,6 +4,7 @@ A7075_T6 = \
      "sigma_ult": 590,  # Ultimate tensile strength in MPa
      "sigma_y": 510,  # Yield strength in MPa
      "alpha": 22.0*10**(-6),  # strain per kelvin (@RT)
+     "ratio": 0.55  #SYS = approx k * sigma_y
      }
 
 A6061_T6 = \
@@ -12,6 +13,7 @@ A6061_T6 = \
      "sigma_ult": 310,  # Ultimate tensile strength in MPa
      "sigma_y": 270,  # Yield strength in MPa
      "alpha": 23.6*10**(-6),  # strain per kelvin (RT - 100C)
+     "ratio": 0.55  # SYS = approx k * sigma_y
      }
 
 Ti_6Al_4V = \
@@ -20,6 +22,7 @@ Ti_6Al_4V = \
      "sigma_ult": 900,  # Ultimate tensile strength in MPa
      "sigma_y": 880,  # Yield strength in MPa
      "alpha": 9.0*10**(-6),  # strain per kelvin (RT - 100C)
+     "ratio": 0.55  # SYS = approx k * sigma_y
      }
 
 A2195_T84 = \
@@ -28,6 +31,7 @@ A2195_T84 = \
      "sigma_ult": 525,  # Ultimate tensile strength in MPa
      "sigma_y": 490,  # Yield strength in MPa
      "alpha": 22.7*10**(-6),  # Strain per kelvin (guess for now)
+     "ratio": 0.55  # SYS = approx k * sigma_y
      }
 # NAISI Grade 18Ni (350) Maraging Steel
 Steel = \
