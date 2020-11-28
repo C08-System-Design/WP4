@@ -81,8 +81,8 @@ def getlugdimensions(sigma_y,sigma_ult):
     A_br = D_new * t_new
 
 
-    print("t/D and w/D ratios are:", t_Dnew,w_D1)
-    print("D is:", D_new, ",t is:",t_new, ",w is:",w_new)
+    # print("t/D and w/D ratios are:", t_Dnew,w_D1)
+    # print("D is:", D_new, ",t is:",t_new, ",w is:",w_new)
 
     #Check loads
     #K values depend on t/D and w/D value --> choose correct one from graph based on w/D and t/D
@@ -101,11 +101,11 @@ def getlugdimensions(sigma_y,sigma_ult):
     MS_obl = (1 /(((P_axial0/(min(Axial)))**1.6 + (P_trans0/P_trans)**1.6))**0.623) - 1
     MS_bend = (sigma_y / sigma_z) - 1
 
-    print("Margin of safety for oblique loads: ", MS_obl)
-    print("Margin of safety for bending loads: ", MS_bend)
+    # print("Margin of safety for oblique loads: ", MS_obl)
+    # print("Margin of safety for bending loads: ", MS_bend)
 
 
-    return(D_new,t_new,w_new,MS_obl,MS_bend)
+    return (D_new,t_new,w_new,MS_obl,MS_bend)
 
 
 #Use sigma_y and sigma_ult as input to find dimensions for that material

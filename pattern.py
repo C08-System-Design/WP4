@@ -1,7 +1,10 @@
-plate_width = float(0.05) #fake value
+from dimensions_assumed import *
+
+w = getlugdimensions(A7075_T6.get("sigma_y"), A7075_T6.get("sigma_ult"))[2]
+plate_width = 0.05
 plate_length = 0.1  #fake value
 h = 0.02
-t_1 = 0.01        #fake value
+t_1 = getlugdimensions(A7075_T6.get("sigma_y"), A7075_T6.get("sigma_ult"))[1]
 t_1_margin = 0    #fake value
 c_to_c = [2,3]         #centre to centre to hole diameter ratio
 c_to_e = 1.5        #centre to edge to hole diameter ratio
@@ -55,10 +58,10 @@ for rows in range(1,4):
             config = [x_a,z_a,D,k_a]
             configs.append(config)
 
-            #print(cols,"cols", rows,"rows each side")
-            #print ("c2c is",c2c)
-            #print ("D is", D)
-            #print ("coor list (z,x)", coor)
+            # print(cols,"cols", rows,"rows each side")
+            # print ("c2c is",c2c)
+            # print ("D is", D)
+            # print ("coor list (z,x)", coor)
 #for i in range(0,18):
 #    print configs[i][2]
 
