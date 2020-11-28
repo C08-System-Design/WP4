@@ -21,10 +21,10 @@ def forceratio(E_a,E_b):
     #Variables for Compliance of fastener 
 
     d = #diameter of head/nut
-    A_sha = #cross-sect area of shank 
+    A_sha = np.pi * (d/2)**2 #cross-sect area of shank 
     L_sha = #length of shank 
-    A_nom = #nominal cross-sect area
-    A_3 = #area for engaged shank
+    A_nom = A_sha #nominal cross-sect area
+    A_3 = A_sha #area for engaged shank
 
 
     '''Calc of fastener compliance'''
