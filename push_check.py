@@ -1,13 +1,16 @@
 from fast_loads import A_i, x_i, z_i, r_i
-from  import Mz, Nf, Fy
+from fast_stress import Mz, Nf, Fy
+
 
 def get_Fpi(Fy, Nf): #eq 4.6
     Fpi = Fy / Nf
     return Fpi
 
+
 def get_sumAr2(Ai, ri, Nf): #parameter needed in eq 4.7
     sumAr2 = sum(Ai[i]*ri[i]*ri[i] for i in range(Nf))
     return sumAr2
+
 
 def get_FpMz(Mz, A, x, r): #4.7
     sign = abs(x) / x #positive is tension, negative is compression

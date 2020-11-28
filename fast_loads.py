@@ -42,8 +42,9 @@ def get_r_i(x, z):
     return r
 
 
-M_y = 0  # TODO: M_y needs to be calculated, check
 # there will not be any moment as everything is symmetric
+configs_loads = []
+loads = []
 for config in configs:
     # retrieve fastener data
     x_i = config[0]
@@ -59,7 +60,9 @@ for config in configs:
     for i in range(A_i.__len__()):
         r_i.append(get_r_i(x_i[i], z_i[i]))  # determine radial distances
     for i in range(A_i.__len__()):
-        get_F_M_y(M_y, A_i[i], r_i[i], A_i, r_i)  # determine moment per fast
-        # The three functions give forces and moment per fastener
-    print(F_xi)
-    print(F_zi)
+        F_M_yi = get_F_M_y(M_y, A_i[i], r_i[i], A_i, r_i)  # moment per fastener
+        loads.append([F_xi, F_zi, F_M_yi])
+        # The three functions give two forces and a moment per fastener
+    configs_loads.append(loads)
+    loads = []
+
