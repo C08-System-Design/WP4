@@ -1,6 +1,6 @@
 def forceratio(E_a,E_b):
     
-    #input = youngs mod of material for attach, youngs mod of mat for fast
+    #input = youngs mod of material for attach syst, youngs mod of fastener mat
     
     ''' Force ratio '''
     import numpy as np
@@ -9,21 +9,21 @@ def forceratio(E_a,E_b):
 
     D_fo = #outer diam of fast
     D_fi = #outer diam of fast
-    t = #thickness of back plate
+    t_2 = #thickness of back-plate
 
 
     '''Calc of attachment compliance'''
-    da = 4*t / (E_a*np.pi*(D_fo**2 - D_fi**2))
+    da = 4*t_2 / (E_a*np.pi*(D_fo**2 - D_fi**2))
 
 
 
 
     #Variables for Compliance of fastener 
 
-    d = #diameter of head/nut
+    d = D_fi #diameter of head/nut
     A_sha = np.pi * (d/2)**2 #cross-sect area of shank 
     L_sha = #length of shank 
-    A_nom = A_sha #nominal cross-sect area
+    A_nom = np.pi * (D_fo /2)**2 #nominal cross-sect area of head/nut
     A_3 = A_sha #area for engaged shank
 
 
