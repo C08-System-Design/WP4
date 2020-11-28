@@ -9,7 +9,7 @@ def forceratio(E_a,E_b):
 
     D_fo = #outer diam of fast
     D_fi = #outer diam of fast
-    t = #thickness of ...
+    t = #thickness of back plate
 
 
     '''Calc of attachment compliance'''
@@ -21,10 +21,8 @@ def forceratio(E_a,E_b):
     #Variables for Compliance of fastener 
 
     d = #diameter of head/nut
-    A_sha1 = #cross-sect area of shank 1
-    A_sha2 = 0 #cross-sect area of shank 2
-    L_sha1 = #length of shank 1
-    L_sha2 = 0 #length of shank 2
+    A_sha = #cross-sect area of shank 
+    L_sha = #length of shank 
     A_nom = #nominal cross-sect area
     A_3 = #area for engaged shank
 
@@ -35,7 +33,7 @@ def forceratio(E_a,E_b):
     L_engsub = 0.4*d
     L_nsub = 0.4*d
 
-    db = 1/E_b * (L_hsub/A_nom + L_engsub/A_3 + L_sha1/A_sha1 + L_sha2/A_sha2) + L_nsub/(E_b * A_nom)
+    db = 1/E_b * (L_hsub/A_nom + L_engsub/A_3 + L_sha/A_sha) + L_nsub/(E_b * A_nom)
     
     #Force ratio
 
