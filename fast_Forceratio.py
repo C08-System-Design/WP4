@@ -13,11 +13,11 @@ def forceratio(E_a, E_b, t, D_fo, D_fi):
 
     # Variables for Compliance of fastener
 
-    d = D_fo  # diameter of head/nut
+    d = D_fi  # diameter of shank
     A_sha = np.pi * (d/2)**2  # cross-section area of shank
     L_sha = t2+t3  # length of shank is both plate thicknesses combined
     # imported from push_fail.py, they are constant at the moment
-    A_nom = A_sha  # nominal cross-section area
+    A_nom = np.pi * D_fo**2  # nominal cross-section area
     A_3 = A_sha  # area for engaged shank
 
     '''Calc of fastener compliance'''

@@ -10,56 +10,45 @@ from sympy import *
 # E_b = #young's mod fastener
 # A_sm = #stiffness area of fastener
 # phi =#force ratio
+# DT = temperature difference
 
-#thermal loads in fastener because of lugs
+#Temp diffs
 
-def orbitloads_lug_fast():
-    DT_neg = 103 - 288.15
-    DT_pos = 396 - 288.15
+DT_neg_orbit = 396 - 288.15 #K
+DT_pos_orbit = 103 - 288.15 #K
 
-    #thermally induced load
+DT_neg_launch = XXX - 288.15 #K #What temperature do we consider here? still not clear to me => discuss
+DT_pos_launch = 450 - 288.15 #K
+
+
+#This is calculated based on D_fi in 4.9, import D_fi !!!
+A_sm = (D_fi/2)**2 * np.pi
+
+
+
+#Function for loads
+
+def orbitloads_lug_fast(DT_pos, DT_neg, phi, alpha_c, alpha_b, E_b, A_sm):
+    
+    #thermal induced load
+    
     F_Tpos = (alpha_c - alpha_b) * DT_pos * E_b * A_sm * (1-phi)
     F_Tneg =  (alpha_c - alpha_b) * DT_neg * E_b * A_sm * (1-phi)
 
     return F_Tpos, F_Tneg
 
 
-# thermal loads in backplate because of vehicle wall
-# Assumptions: Looked at this as a cylinder of two materials constrained by two walls (see MoM Problem 4-68)
-# (F * t_b)/(A * E_b) + (F * t_w)/(A * E_w) = alpha_b * DT * t_b + alpha_w * DT * t_w
-# t = thickness, A = contact surface, E = Young, alpha= thermal expansion coef, DT = difference in temp, _b = backplate, _w = wall
-# Fill these values in in SI units (IE: Meters and stuff
-# The function returns a list with lists in it. Each sublist is a different material. The first entry in the sublist is the load for the positive temperature change
-# and the second entry is the load for the negative temperature change
 
-def orbitloads_back_wall():
-    F_list_mat = []
-    F_list = []
-    DT_pos = 396 - 288.15
-    DT_neg = 103 - 288.15
-    DT_list = [DT_pos, DT_neg]
-    F = Symbol("F")
-    for mat in mats:
-        alpha_b = mat.get("alpha")
-        E_b = mat.get("E")
-        for DT in DT_list:
-            F_minmax = solve((F * t_b) / (A * E_b) + (F * t_w) / (A * E_w)
-                             - alpha_b * DT * t_b - alpha_w * DT * t_w, F)
-            F_list = F_list + F_minmax
-            # is this in N? Then it's way too low
-        F_list_mat.append(F_list)
-        F_list = []
-    return F_list_mat
+# Loads for back-plate => phi and alpha for back plate (only for launch --> most relevant)
+
+F_Tpos_back, F_Tneg_back = orbitloads_lug_fast(DT_pos_launch, DT_neg_orbit, phi, alpha_c, alpha_b, E_b, A_sm)
 
 
-t_b = 0.002
-A = 0.4
-E_w = 207 * 10**9
-t_w = 0.004
-alpha_w = 13.3 * 10**(-6)
-Loads_therm = orbitloads_back_wall()
-print(Loads_therm)
-# print(orbitloads_back_wall())
+# Loads for vehicle wall => phi and alpha for vehicle wall (only for launch --> most relevant)
+# Use lowest Temp for orbit? otherwise there is no DT_neg
+
+F_Tpos_wall, F_Tneg_wall = orbitloads_lug_fast(DT_pos, DT_neg, phi, alpha_c, alpha_b, E_b, A_sm)
+
 
 """
 Results from this code need to be coupled with all the configs
