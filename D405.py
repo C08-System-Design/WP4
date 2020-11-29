@@ -1,4 +1,4 @@
-from D404 import configs, D
+from D404 import *
 from math import pi
 # configs is a list with lists (configurations) containing two lists (x_i, z_i)
 # D is diameter of fasteners, all fasteners have the same diameter

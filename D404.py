@@ -1,11 +1,12 @@
 from D403 import *
+from D414 import mat
 
-w = getlugdimensions(A7075_T6.get("sigma_y"), A7075_T6.get("sigma_ult"))[2]
+w = getlugdimensions(mat.get("sigma_y"), mat.get("sigma_ult"))[2]
 plate_width = w
 # print(w)
 plate_length = 0.1  #fake value
 h = 0.02
-t_1 = getlugdimensions(A7075_T6.get("sigma_y"), A7075_T6.get("sigma_ult"))[1]
+t_1 = getlugdimensions(mat.get("sigma_y"), mat.get("sigma_ult"))[1]
 t_1_margin = 0    #fake value
 c_to_c = [2,3]         #centre to centre to hole diameter ratio
 c_to_e = 1.5        #centre to edge to hole diameter ratio

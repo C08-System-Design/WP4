@@ -1,13 +1,11 @@
-from D409 import *
-from D410 import phi_b, phi_w
+from D410 import *
 import numpy as np
-from mat import *
 from sympy.solvers import *
 from sympy import *
 from math import pi
 
 # General constants
-alpha_c = A7075_T6.get("alpha")  # thermal coeff lug
+alpha_c = mat.get("alpha")  # thermal coeff lug
 alpha_b = A8090_T8151.get("alpha")  # thermal coeff fastener
 E_b = A8090_T8151.get("E")  # Young's mod fastener
 
@@ -63,7 +61,6 @@ def get_thermal_loads(mat, i):
             F_Tpos_wl, F_Tpos_wo, F_Tneg_wl, F_Tneg_wo]
 
 
-mat = A7075_T6
 maxTLs = []
 minTLs = []
 for i in range(18):

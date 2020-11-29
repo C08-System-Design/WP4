@@ -1,5 +1,4 @@
-from D403 import *  # retrieve loads
-from D404 import configs, D
+from D405 import *
 from math import sqrt, pi
 # import from D405 not necessary as we know the CG did not change
 

@@ -1,5 +1,4 @@
 from D409 import *
-from mat import *
 import numpy as np
 
 
@@ -41,7 +40,7 @@ phi_w = []  # force ratios for wall of every configuration
 for config in configs:
     D_fo = config[2]+config[2]*0.4  # same as in push_fail.py, 0.4 is arbitrary
     D_fi = config[2]
-    phi = forceratio(A2195_T84.get("E"), Steel.get("E"), t_w, D_fo, D_fi)
+    phi = forceratio(mat.get("E"), A8090_T8151.get("E"), t_w, D_fo, D_fi)
     phi_w.append(phi)
 
 # to asses force ratio of backplate thickness
@@ -49,5 +48,5 @@ phi_b = []  # force ratios for backplate of every configuration
 for config in configs:
     D_fo = config[2]+config[2]*0.4  # same as in push_fail.py, 0.4 is arbitrary
     D_fi = config[2]
-    phi = forceratio(A7075_T6.get("E"), Steel.get("E"), t_b, D_fo, D_fi)
+    phi = forceratio(mat.get("E"), A8090_T8151.get("E"), t_b, D_fo, D_fi)
     phi_b.append(phi)

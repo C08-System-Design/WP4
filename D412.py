@@ -1,5 +1,3 @@
-from D406 import *
-from D410 import phi_b, phi_w
 from D411 import *
 from math import sqrt
 from sympy import *

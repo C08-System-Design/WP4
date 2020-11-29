@@ -11,6 +11,7 @@ o vehicle wall pull-through checks.  RIGHT?
 
 from mat import *
 from D412 import *
+from D414 import mat
 
 s = 0  # a variable to track scores
 D = []
@@ -25,32 +26,44 @@ for mat in mats:
     MS_obl.append(getlugdimensions(mat.get("sigma_y"), mat.get("sigma_ult"))[3])
     MS_bend.append(getlugdimensions(mat.get("sigma_y"), mat.get("sigma_ult"))[4])
 
-for t in t:
-    None
 
-print(MS_obl)
-print(MS_bend)
-print()
+# thickness is iterated until the code gives reasonable
+print("--------------------------------------------")
+print("Rerunning D407 for the new loading from D412")
+print("--------------------------------------------")
 
-"""
-Single material calculations:
-###
-D403 works excellent.
-INPUT material properties sigma_y and sigma_ult
-OUTPUT lug dimensions
-- where is the separation between two lugs?
-###
-D404 is crappy, but gets something done.
-INPUT t and w
-OUTPUT configurations (configs)
-- output contains fastener pattern and one same diameter for every fastener
-###
-D405
-"""
+D = []
+for config in configs:
+    D.append(config[2])  # 18 different diameters for 18 fastener patterns
+
+t_2 = []
+for t in range(18):
+    t_2.append((t+1)/10000)
+
+c = 0
+for i in sigma_br(Fs, D, t_2):
+    c += 1
+    if i >= (mat.get("sigma_ult")):
+        print("Error in D407: In-plane loads are too high, increase thickness "
+              "or reduce loading for config", c)
 
 
-"""
-Workflow:
-First make sure the iteration works for a single material
-Then run it for many materials
-"""
+print("-----------------")
+print("CALCULATED DIMENSIONS")
+print("-----------------")
+
+cn = 1  # number of the configuration selected
+t_1 = t_1  # defined earlier
+t_2 = t_2  # defined earlier
+t_3 = t3  # defined earlier
+D_1 = getlugdimensions(mat.get("sigma_y"), mat.get("sigma_ult"))[0]
+D_2 = configs[cn][2]
+w_1 = getlugdimensions(mat.get("sigma_y"), mat.get("sigma_ult"))[2]
+w_2 = w_1
+print(round(t_1, 5), "lug thickness in m")
+print(round(t_2[cn], 5), "backplate thickness in m")
+print(round(t_3, 5), "spacecraft wall thickness in m")
+print(round(D_1, 5), "lug hole diameter in m")
+print(round(D_2, 5), "fastener hole diameter in m")
+print(round(w_1, 5), "lug width in m")
+print(round(w_2, 5), "backplate width in m")

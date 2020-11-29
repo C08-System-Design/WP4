@@ -1,5 +1,4 @@
 from D406 import *
-from mat import *
 from math import sqrt
 
 # sigma_br = P_i/D_2/t_2  # in-plane force / fast dia / backplate thickness
@@ -12,7 +11,7 @@ from math import sqrt
 # --- Import --- #
 # import lug geometry and fast dia
 # setup wall geometry
-t_wall = 0.01  # [m]
+t_wall = 0.001  # [m]
 
 
 def get_P_i(load):
@@ -38,5 +37,12 @@ for config in configs:
 
 t_2 = []
 for t in range(18):
-    t_2.append((t+1)/1000)
+    t_2.append((t+1)/10000)
 # print(sigma_br(P_i, D, t_2), "MPa")
+
+c = 0
+for i in sigma_br(P_i, D, t_2):
+    c += 1
+    if i >= (mat.get("sigma_ult")):
+        print("Error in D407: In-plane loads are too high, increase thickness "
+              "or reduce loading for config", c)
