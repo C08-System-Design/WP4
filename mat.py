@@ -40,7 +40,17 @@ Steel = \
      "sigma_ult": 1140,  # Ultimate tensile strength in MPa
      "sigma_y": 827,  # Yield strength in MPa
      "alpha": 11.3*10**(-6),  # thermal exp coef in 1/K
+     "ratio": 0.55  # SYS = approx k * sigma_y
      }
+
+A8090_T8151 = \
+ {"rho": 2540,  # Density in kg/m^3
+  "E": 77,  # Young's modulus in GPa
+  "sigma_ult": 450,  # Ultimate tensile strength in MPa
+  "sigma_y": 370,  # Yield strength in MPa
+  "alpha": 21.4*10**(-6),  # thermal exp coef in 1/K
+  "ratio": 0.6  # SYS = approx k * sigma_y
+  }
 
 mats = [A7075_T6, A6061_T6, Ti_6Al_4V, A2195_T84, Steel]
 

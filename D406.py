@@ -55,3 +55,10 @@ for config in configs:
         # The three functions give two forces and a moment per fastener
     configs_loads.append(loads)
     loads = []
+
+loads_mag = []  # magnitude of vector sum of mechanical loads of every config
+temp = 0
+for i in configs_loads:
+    loads_mag.append(sqrt(i[0][0]**2+i[0][1]**2))
+    # considering only F_x and F_y since the moment is irrelevant
+
