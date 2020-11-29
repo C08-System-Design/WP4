@@ -1,8 +1,13 @@
-#############################################################################################################################################
-# All values ar retrieved from launch data parameterically so no changes have to be made in this file if a parameter in launch load changes #
-#############################################################################################################################################
+"""All values ar retrieved from launch data parametrically so no changes have
+to be made in this file if a parameter in launch load changes"""
 
-from launch_data import *
+
+m = 22.3449         # mass of satellite
+g = 9.81            # gravitational acceleration
+long_load = 7.5     # experienced amount of G's in longitudinal direction
+lat_load = 1.5      # experienced amount of G's in lateral direction
+FLL = 3.2175        # the safety factor (this is the highest factor -->
+# --> ultimate Load - but can be changed to Yield Load 2.68125)
 
 m = 0.5*m
 d_z = 0.6  # estimated from CATIA, dist from CG to lug in z axis
