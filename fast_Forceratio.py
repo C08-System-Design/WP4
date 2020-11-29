@@ -28,7 +28,7 @@ def forceratio(E_a, E_b, t, D_fo, D_fi):
     db = 1/E_b * (L_hsub/A_nom + L_engsub/A_3 + L_sha/A_sha)\
         + L_nsub/(E_b * A_nom)
 
-    phi = da / (da+db)  # Force ratio
+    phi = da/(da+db)  # Force ratio
     return phi
 
 
