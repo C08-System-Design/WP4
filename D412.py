@@ -4,21 +4,21 @@ from D411 import *
 from math import sqrt
 from sympy import *
 
-# Calculating the resulting force due to thermal stresses and lateral stresses
-# phi is NOT a real value I think. It's dependant on if the fastener is
-# eccentric or concentric and we didn't research that.
-# currently done for A7075_Y6
-# F_Tpos_back, F_Tneg_back = orbitloads_lug_fast(DT_pos_launch, DT_neg_launch,
-# 0.5, 22.0*10**(-6), 11.3*10**(-6), 207*10**9., A_sm)
-
-
+# calculating the resulting force due to thermal and mechanical loading
+# Currently done for A8090_T8151
 # It is assumed that the in plane mechanical forces act in the same direction
 # as the thermal stresses so that it gives a conservative answer.
-def resultant_load():
-    F_res_pos_back = sqrt(F_xi**2 + F_zi**2) + F_Tpos_back
-    F_res_neg_back = sqrt(F_xi**2 + F_zi**2) + F_Tneg_back
-    F_res_pos_wall = sqrt(F_xi**2 + F_zi**2) + F_Tpos_wall
-    F_res_neg_wall = sqrt(F_xi**2 + F_zi**2) + F_Tneg_wall
-    return F_res_pos_back, F_res_neg_back, F_res_pos_wall, F_res_neg_wall
 
-# Calculate bearing stress for these new values
+
+def res_load(Fm, Ft):  # resulting load
+    F = Fm + Ft
+    return F
+
+
+Fs = []
+for i in range(18):
+    Fs.append(res_load(loads_mag[i], max(abs(minTLs[i]), maxTLs[i])))
+
+
+# gives the highest combined loading magnitude for each configuration
+# this is then taken to 407 again

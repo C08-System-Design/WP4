@@ -64,12 +64,16 @@ def get_thermal_loads(mat, i):
 
 
 mat = A7075_T6
+maxTLs = []
+minTLs = []
 for i in range(18):
     maxTL = max(get_thermal_loads(mat, i))  # max thermal load
     minTL = min(get_thermal_loads(mat, i))  # min thermal load
+    maxTLs.append(maxTL)
+    minTLs.append(minTL)
     ML = loads_mag[i]  # mechanical load, is already max
-    print(get_thermal_loads(mat, i))
-    print(configs[i][2], "[m]")
+    # print(get_thermal_loads(mat, i))
+    # print(configs[i][2], "[m]")
 # Loads for vehicle wall => phi and alpha for vehicle wall
 # (only for pos_launch and neg_orbit --> most relevant)
 # Use lowest Temp for orbit? otherwise there is no DT_neg
