@@ -33,8 +33,8 @@ def forceratio(E_a, E_b, t, D_fo, D_fi):
 
 
 # thickness is taken from push_fail, assumed constant
-t_b = 0.001  # = t2
-t_w = 0.002  # = t3
+t_b = t2  # from D409
+t_w = t3  # from D409
 
 # to asses force ratio of wall thickness
 phi_w = []  # force ratios for wall of every configuration

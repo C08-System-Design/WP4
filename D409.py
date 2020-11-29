@@ -15,13 +15,14 @@ def get_tau(Fy, A_y):
 
 # values need to be put in still
 c = 0
+t2 = 0.0005  # thickness from spacecraft wall
+t3 = 0.0005  # thickness from lug wall
 for config in configs:
     F_y = max_Fyi[c]  # use maximum loaded fastener
     c += 1
     D_fo = config[2]+config[2]*0.4
     D_fi = config[2]
-    t2 = 0.0005  # thickness from spacecraft wall
-    t3 = 0.0005  # thickness from lug wall
+
     # sigma = F_y/(D_fi**2/4*pi)/1e6
     # print(sigma, "MPa")  # tensile strength check for the fastener
 
