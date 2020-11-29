@@ -27,7 +27,7 @@ for config in configs:
     # print(sigma, "MPa")  # tensile strength check for the fastener
 
     sigma_yield = A7075_T6.get("sigma_y")  # depends on material type
-    tau_yield = A7075_T6.get("ratio")*A7075_T6.get("sigma_y")
+    tau_yield = A7075_T6.get("ratio")*A7075_T6.get("sigma_ult")
 
     A_zx = 1/4 * pi * (D_fo**2 - D_fi**2)  # area normal stress works on
     A_y2 = pi * D_fi * t2  # area shear stress works on with thickness t2

@@ -33,7 +33,7 @@ def orbitloads_lug_fast(DT_pos, DT_neg, phi, alpha_c, alpha_b, E_b, A_sm):
     #thermal induced load
     
     F_Tpos = (alpha_c - alpha_b) * DT_pos * E_b * A_sm * (1-phi)
-    F_Tneg =  (alpha_c - alpha_b) * DT_neg * E_b * A_sm * (1-phi)
+    F_Tneg = (alpha_c - alpha_b) * DT_neg * E_b * A_sm * (1-phi)
 
     return F_Tpos, F_Tneg
 

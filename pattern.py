@@ -1,7 +1,8 @@
 from dimensions_assumed import *
 
 w = getlugdimensions(A7075_T6.get("sigma_y"), A7075_T6.get("sigma_ult"))[2]
-plate_width = 0.05
+plate_width = w
+print(w)
 plate_length = 0.1  #fake value
 h = 0.02
 t_1 = getlugdimensions(A7075_T6.get("sigma_y"), A7075_T6.get("sigma_ult"))[1]
@@ -61,7 +62,7 @@ for rows in range(1,4):
             # print(cols,"cols", rows,"rows each side")
             # print ("c2c is",c2c)
             # print ("D is", D)
-            # print ("coor list (z,x)", coor)
+            print("coor list (z,x)", coor)
 #for i in range(0,18):
 #    print configs[i][2]
 
