@@ -1,13 +1,6 @@
 from D406 import *
 from math import sqrt
 
-# sigma_br = P_i/D_2/t_2  # in-plane force / fast dia / backplate thickness
-# get bearing allowable - different for every material
-# verify D_2 and t_2, can be reduced to optimize mass
-# do it for both the backup wall and spacecraft wall
-# verify that not more fasteners are needed
-# higher thickness can be only at a section of the wall
-
 
 def get_P_i(load):
     Pi = sqrt(load[0]**2+load[1]**2)
@@ -43,5 +36,3 @@ for i in range(18):
 # for i in sigma_br(P_i, D, t_2):
 #     c += 1
 #     if i >= (mat.get("sigma_ult")):
-#         print("Error in D407: In-plane loads are too high, increase thickness "
-#               "or reduce loading for config", c)

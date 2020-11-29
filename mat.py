@@ -53,19 +53,3 @@ A8090_T8151 = \
   }
 
 mats = [A7075_T6, A6061_T6, Ti_6Al_4V, A2195_T84, Steel, A8090_T8151]
-
-"""
-This code stores all defined materials (mats) in a list called mats.
-Items in this list are dictionaries containing properties of a single material.
-To get these properties, use the .get method with argument being your property.
-For example:
-A7075_T6.get("rho")
-
-To iterate over the list of all materials, you do the following:
-for mat in mats:
-    mat.get("rho")
-
-For now, my suggestion would be to import a single material into your code using
-    from mat import Al6061_T6 as mat
-and use mat.get("yourwantedproperty")
-"""

@@ -7,19 +7,14 @@ def forceratio(E_a, E_b, t, D_fo, D_fi):
     # input = Young's mod of material for attach, Young's mod of mat for fast,
     # variables for compliance of attachment mechanism
     # these are D_fo and D_fi inputted to this function
-    """Calc of attachment compliance"""
     da = 4*t / (E_a*np.pi*(D_fo**2 - D_fi**2))
-
-    # Variables for Compliance of fastener
 
     d = D_fi  # diameter of shank
     A_sha = np.pi * (d/2)**2  # cross-section area of shank
     L_sha = t2+t3  # length of shank is both plate thicknesses combined
-    # imported from push_fail.py, they are constant at the moment
     A_nom = np.pi * D_fo**2  # nominal cross-section area
     A_3 = A_sha  # area for engaged shank
 
-    '''Calc of fastener compliance'''
     L_hsub = 0.5*d
     L_engsub = 0.4*d
     L_nsub = 0.4*d
@@ -31,7 +26,6 @@ def forceratio(E_a, E_b, t, D_fo, D_fi):
     return phi
 
 
-# thickness is taken from push_fail, assumed constant
 t_b = t2  # from D409
 t_w = t3  # from D409
 

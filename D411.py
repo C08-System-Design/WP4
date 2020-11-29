@@ -31,12 +31,6 @@ def loads_lug_fast(DT, phi, alpha_c, alpha_b, E_b, A_sm):
     return F_T
 
 
-# print("Proposed effective stiffness area", D_fi*t)
-# print(configs[0][2])
-# print(phi_b[0])
-# print("Current stiffness area", D_fi**2/4*pi)
-# Loads for back-plate => phi and alpha for back plate
-# (only for pos_launch and neg_orbit --> most relevant)
 t = t2+t3  # backplate + wall thickness
 
 
@@ -69,8 +63,3 @@ for i in range(18):
     maxTLs.append(maxTL)
     minTLs.append(minTL)
     ML = loads_mag[i]  # mechanical load, is already max
-    # print(get_thermal_loads(mat, i))
-    # print(configs[i][2], "[m]")
-# Loads for vehicle wall => phi and alpha for vehicle wall
-# (only for pos_launch and neg_orbit --> most relevant)
-# Use lowest Temp for orbit? otherwise there is no DT_neg

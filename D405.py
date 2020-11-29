@@ -37,5 +37,3 @@ for config in configs:
 
     cgs_x.append(round(get_x_cg(A_i, x_i), 3))
     cgs_z.append(round(get_z_cg(A_i, z_i), 3))
-    # important to maintain order! A_i correspond to x_i and z_i
-    # if we select different fasteners, does area scale with mass appropriately

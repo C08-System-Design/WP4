@@ -1,14 +1,3 @@
-"""
-This is the ultimate file. The file that runs iterations on every possible
-combination of the lug design. It considers:
-o lug dimensions,
-o back-up wall bearing checks,
-o back-up wall bearing checks including thermal loads
-o back-up wall pull-through checks,
-o vehicle wall bearing checks including thermal loads (this is zero difference)
-o vehicle wall pull-through checks.  RIGHT?
-"""
-
 from mat import *
 from D412 import *
 from D414 import mat
@@ -85,5 +74,3 @@ print(configs[cn-1][0], "are the x_i coordinates of fasteners")
 print(configs[cn-1][1], "are the z_i coordinates of fasteners")
 print(0.02, "is the MS for in-plane stress for the current configuration (third)")
 print(0.2, "is the MS for out-of-plane stress for the current configuration (third)")
-
-# recommendations: further automation of the code
