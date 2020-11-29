@@ -1,33 +1,34 @@
-'''Dimension determination'''
+"""Lug dimension determination"""
 import numpy as np
 from mat import *
 
-def getlugdimensions(sigma_y,sigma_ult):
+
+def getlugdimensions(sigma_y, sigma_ult):
     
-    #Material properties 
-    sigma_y = sigma_y*10**6 #Pa
-    sigma_ult = sigma_ult*10**6 #Pa
-    P_trans0 = 2644.8/2 #N, load per lug
-    P_axial0 = 529/2 #N, per lug
+    # Material properties
+    sigma_y = sigma_y*10**6  # Pa
+    sigma_ult = sigma_ult*10**6  # Pa
+    P_trans0 = 2644.8/2  # N, load per lug
+    P_axial0 = 529/2  # N, per lug
 
-    P_trans = P_trans0 *1.5 #safety factor
-    P_axial = P_axial0 *1.5 #safety factor
-    M_z = (0.6 + 0.03)* P_axial0 #assumed distance 0.03m, moment arm is 60 cm
+    P_trans = P_trans0 * 1.5  # safety factor
+    P_axial = P_axial0 * 1.5  # safety factor
+    M_z = (0.6 + 0.03) * P_axial0  # assumed distance 0.03m, moment arm is 60 cm
 
-    K_ty = 0.5 #from graph for assumed A_av/A_br
+    K_ty = 0.5  # from graph for assumed A_av/A_br
 
     '''Calculate A_br'''
     A_br = P_trans / (sigma_y * K_ty)
 
-    #List for iteration over t/D ratio's
-    t_D = [0.4,0.3,0.2,0.15,0.12,0.1,0.08,0.06] #referred to as y
+    # List for iteration over t/D ratio's
+    t_D = [0.4,0.3,0.2,0.15,0.12,0.1,0.08,0.06] # referred to as y
     w_D = [2.5,2.75,3,3.25,3.5]
     D = []
     t = []
     w = []
     vol = []
 
-    #A_br = Dt = D*D*y
+    # A_br = Dt = D*D*y
     for y in t_D:
         D1 = np.sqrt(A_br/y)
         t1 = D1*y
@@ -49,9 +50,9 @@ def getlugdimensions(sigma_y,sigma_ult):
                         t.append(t1)
                         w.append(w1)
                         
-                        v = (w1 * D1/2 - (( D1 / 2)**2 * np.pi)/2)*t1 + ((( w1 / 2)**2 * np.pi)/2 - (( D1 / 2)**2 * np.pi)/2)*t1
+                        v = (w1 * D1/2 - (( D1 / 2)**2 * np.pi)/2)*t1 + \
+                            (((w1/2)**2*np.pi)/2 - ((D1/2)**2*np.pi)/2)*t1
                         vol.append(v)
-
 
     index_min = vol.index(min(vol))
     D_opt = D[index_min]
@@ -61,8 +62,7 @@ def getlugdimensions(sigma_y,sigma_ult):
     t_D1 = t_opt/D_opt
     w_D1 = w_opt/D_opt
 
-
-    #check bending moment
+    # check bending moment
     sigma_z = (M_z * t_opt / 2) / (1/12 * w_opt * t_opt**3)
     w_new = w_opt
     t_new = t_opt
@@ -72,21 +72,19 @@ def getlugdimensions(sigma_y,sigma_ult):
         
         sigma_z = (M_z * t_new / 2) / (1/12 * w_new * t_new**3)
 
-        
-    #newly found values
+    # newly found values
     D_new = w_new / w_D1
 
     t_Dnew = t_new/D_new
 
     A_br = D_new * t_new
-
-
     # print("t/D and w/D ratios are:", t_Dnew,w_D1)
     # print("D is:", D_new, ",t is:",t_new, ",w is:",w_new)
 
-    #Check loads
-    #K values depend on t/D and w/D value --> choose correct one from graph based on w/D and t/D
-    #Should be > 264.5 N each
+    # Check loads
+    # K values depend on t/D and w/D value
+    # --> choose correct one from graph based on w/D and t/D
+    # Should be > 264.5 N each
 
     P_tens = sigma_y * (w_new - D_new)*t_new * 0.94
 
@@ -96,19 +94,18 @@ def getlugdimensions(sigma_y,sigma_ult):
 
     Axial = [P_tens,P_br]
 
-    #Margin of safety
+    # Margin of safety
 
-    MS_obl = (1 /(((P_axial0/(min(Axial)))**1.6 + (P_trans0/P_trans)**1.6))**0.623) - 1
+    MS_obl = (1/(((P_axial0/(min(Axial)))**1.6
+                  + (P_trans0/P_trans)**1.6))**0.623) - 1
     MS_bend = (sigma_y / sigma_z) - 1
 
     # print("Margin of safety for oblique loads: ", MS_obl)
     # print("Margin of safety for bending loads: ", MS_bend)
+    return D_new, t_new, w_new, MS_obl, MS_bend
 
 
-    return (D_new,t_new,w_new,MS_obl,MS_bend)
-
-
-#Use sigma_y and sigma_ult as input to find dimensions for that material
+# Use sigma_y and sigma_ult as input to find dimensions for that material
 
 getlugdimensions(A7075_T6.get("sigma_y"),A7075_T6.get("sigma_ult"))
 
