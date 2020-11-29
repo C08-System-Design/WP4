@@ -65,4 +65,3 @@ for config in configs:
         # The three functions give two forces and a moment per fastener
     configs_loads.append(loads)
     loads = []
-

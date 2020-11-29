@@ -62,7 +62,7 @@ for rows in range(1,4):
             # print(cols,"cols", rows,"rows each side")
             # print ("c2c is",c2c)
             # print ("D is", D)
-            print("coor list (z,x)", coor)
+            # print("coor list (z,x)", coor)
 #for i in range(0,18):
 #    print configs[i][2]
 

@@ -39,6 +39,7 @@ t_w = 0.002  # = t3
 # to asses force ratio of wall thickness
 phi_w = []  # force ratios for wall of every configuration
 for config in configs:
+    print(config)
     D_fo = config[2]+config[2]*0.4  # same as in push_fail.py, 0.4 is arbitrary
     D_fi = config[2]
     phi = forceratio(A2195_T84.get("E"), Steel.get("E"), t_w, D_fo, D_fi)
