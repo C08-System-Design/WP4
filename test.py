@@ -7,4 +7,4 @@ for r in range(len(lst) + 1):
     combs_object = itertools.combinations(lst, r)
     combs_lst = list(combs_object)
     all_combs += combs_lst
-print(all_combs)
+# print(all_combs)
