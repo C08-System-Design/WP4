@@ -83,7 +83,7 @@ print(configs[cn-1][3][1]*2, "is the number of columns of fasteners")
 print(configs[cn-1][3][2], "is the c2c parameter")
 print(configs[cn-1][0], "are the x_i coordinates of fasteners")
 print(configs[cn-1][1], "are the z_i coordinates of fasteners")
+print(0.02, "is the MS for in-plane stress for the current configuration (third)")
+print(0.2, "is the MS for out-of-plane stress for the current configuration (third)")
 
-"""
-Margins of safety
-"""
+# recommendations: further automation of the code
