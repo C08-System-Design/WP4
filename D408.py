@@ -1,4 +1,4 @@
-from fast_stress import *
+from D407 import *
 
 
 def get_Fpi(Fy, Nf): #eq 4.6 in reader

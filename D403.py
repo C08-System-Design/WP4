@@ -1,7 +1,6 @@
-"""Lug dimension determination"""
+from D401 import *
 import numpy as np
 from mat import *
-from launch_loads import *
 
 
 def getlugdimensions(sigma_y, sigma_ult):
@@ -106,11 +105,9 @@ def getlugdimensions(sigma_y, sigma_ult):
     return D_new, t_new, w_new, MS_obl, MS_bend
 
 
-# Use sigma_y and sigma_ult as input to find dimensions for that material
-
-getlugdimensions(A7075_T6.get("sigma_y"),A7075_T6.get("sigma_ult"))
-
 """
+Use sigma_y and sigma_ult as input to find lug dimensions for that material
+
 getlugdimensions(...)[0] is D_new, diameter of the lug hole
 getlugdimensions(...)[1] is t_new, thickness of the lug
 getlugdimensions(...)[2] is w_new, width of the lug

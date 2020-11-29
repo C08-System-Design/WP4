@@ -1,4 +1,4 @@
-from push_fail import *
+from D409 import *
 from mat import *
 import numpy as np
 
@@ -52,6 +52,3 @@ for config in configs:
     D_fi = config[2]
     phi = forceratio(A7075_T6.get("E"), Steel.get("E"), t_b, D_fo, D_fi)
     phi_b.append(phi)
-
-print(phi_w)
-print(phi_b)

@@ -1,4 +1,4 @@
-from fast_loads import *
+from D406 import *
 from mat import *
 from math import sqrt
 

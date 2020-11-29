@@ -1,13 +1,4 @@
-"""
-pick a coordinate system (cs)
-    my guess is that in the centre of the xz plane is best
-    and symmetric over both the x axis and z axis
-import coordinates x_i , z_i of fasteners
-select a fastener diameter (are all the same?)
-get area
-get x_cg , z_cg
-"""
-from pattern import configs, D
+from D404 import configs, D
 from math import pi
 # configs is a list with lists (configurations) containing two lists (x_i, z_i)
 # D is diameter of fasteners, all fasteners have the same diameter

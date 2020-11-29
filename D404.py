@@ -1,4 +1,4 @@
-from dimensions_assumed import *
+from D403 import *
 
 w = getlugdimensions(A7075_T6.get("sigma_y"), A7075_T6.get("sigma_ult"))[2]
 plate_width = w

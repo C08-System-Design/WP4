@@ -1,17 +1,7 @@
-"""
-Determine net force F_cg acting at cg calculated in fast_cg.py
-It is composed of F_cgx and F_cgz
-Both must be parallel to F_x and F_z and the same in magnitude
-There might be a moment arm d creating M_cgy
-F_x = F_in-plane-x, F_z = F_in-plane-z and F_M_y = F_in-plane-M_y
-    These are contributions of a SINGLE fastener
-n_f is the number of fasteners
-F_cg is a vector sum of loads F_x and F_z determined previously
-"""
-
+from D403 import *  # retrieve loads
+from D404 import configs, D
 from math import sqrt, pi
-from launch_loads import *  # retrieve loads
-from pattern import configs, D
+# import from D405 not necessary as we know the CG did not change
 
 
 def get_F_cg(Fx, Fz):
