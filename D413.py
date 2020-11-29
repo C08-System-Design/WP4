@@ -10,7 +10,7 @@ o vehicle wall pull-through checks.  RIGHT?
 """
 
 from mat import *
-from D403 import *
+from D412 import *
 
 s = 0  # a variable to track scores
 D = []
@@ -27,6 +27,10 @@ for mat in mats:
 
 for t in t:
     None
+
+print(MS_obl)
+print(MS_bend)
+print()
 
 """
 Single material calculations:

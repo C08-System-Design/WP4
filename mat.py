@@ -52,7 +52,7 @@ A8090_T8151 = \
   "ratio": 0.6  # SYS = approx k * sigma_y
   }
 
-mats = [A7075_T6, A6061_T6, Ti_6Al_4V, A2195_T84, Steel]
+mats = [A7075_T6, A6061_T6, Ti_6Al_4V, A2195_T84, Steel, A8090_T8151]
 
 """
 This code stores all defined materials (mats) in a list called mats.
