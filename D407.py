@@ -8,11 +8,6 @@ from math import sqrt
 # verify that not more fasteners are needed
 # higher thickness can be only at a section of the wall
 
-# --- Import --- #
-# import lug geometry and fast dia
-# setup wall geometry
-t_wall = 0.001  # [m]
-
 
 def get_P_i(load):
     Pi = sqrt(load[0]**2+load[1]**2)
@@ -35,14 +30,18 @@ D = []
 for config in configs:
     D.append(config[2])  # 18 different diameters for 18 fastener patterns
 
+# Override
 t_2 = []
-for t in range(18):
-    t_2.append((t+1)/10000)
-# print(sigma_br(P_i, D, t_2), "MPa")
+for i in range(18):
+    t_2.append(0.005)
+# print(sigma_br(P_i, D, t_2)[17], "MPa")
 
-c = 0
-for i in sigma_br(P_i, D, t_2):
-    c += 1
-    if i >= (mat.get("sigma_ult")):
-        print("Error in D407: In-plane loads are too high, increase thickness "
-              "or reduce loading for config", c)
+# t_2 = []
+# for t in range(18):
+#     t_2.append((t+1)/1000)
+# c = 0
+# for i in sigma_br(P_i, D, t_2):
+#     c += 1
+#     if i >= (mat.get("sigma_ult")):
+#         print("Error in D407: In-plane loads are too high, increase thickness "
+#               "or reduce loading for config", c)

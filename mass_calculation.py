@@ -17,5 +17,7 @@ V_3 = (w_1 * w_2 - n * np.pi * (D_2 / 2)**2 ) * t_2
 
 V = V_1 + V_2 + V_3
 
-mass = rho * V
+mass = mat.get("rho") * V
+
+print("The final estimated mass is", mass, "kg")
 

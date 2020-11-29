@@ -38,14 +38,17 @@ for config in configs:
     tau_y_3 = get_tau(F_y, A_y3)    # calc shear stress for lug plate
 
     # check if shear stresses are too high
-    if tau_y_2/1e6 > tau_yield:
-        print("Error in D409: Out-of-plane loads are too high, increase "
-              "wall thickness or reduce loads for config", c)
+    # if tau_y_2/1e6 > tau_yield:
+    #     print("Error in D409: Out-of-plane loads are too high, increase "
+    #           "wall thickness or reduce loads for config", c)
     #     print(tau_y_2/1e6, " vs ", tau_yield)
-    if tau_y_3/1e6 > tau_yield:  # assumes same material
-        print("Error in D409: Out-of-plane loads are too high, increase "
-              "wall thickness or reduce loads for config", c)
+    # if tau_y_3/1e6 > tau_yield:  # assumes same material
+    #     print("Error in D409: Out-of-plane loads are too high, increase "
+    #           "wall thickness or reduce loads for config", c)
     #     print(tau_y_3/1e6, " vs ", tau_yield)
-    # print("Shear stress in the backplate:", tau_y_2/1e6, "MPa")
-    # print("Shear stress in the spacecraft wall:", tau_y_3/1e6, "MPa")
-    # print("-----------------------------")
+    print("Shear stress in the backplate:", tau_y_2/1e6, "MPa")
+    print("Shear stress in the spacecraft wall:", tau_y_3/1e6, "MPa")
+    print("Shear stress allowable:", tau_yield, "MPa")
+    MS = tau_yield/(max(tau_y_2, tau_y_3)/1e6) - 1
+    print("MS is", MS)
+    print("-----------------------------")
