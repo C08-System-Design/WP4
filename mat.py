@@ -1,10 +1,10 @@
-
 A7075_T6 = \
     {"rho": 2810,  # Density in kg/m^3
      "E": 71.7,  # Young's modulus in GPa
      "sigma_ult": 590,  # Ultimate tensile strength in MPa
      "sigma_y": 510,  # Yield strength in MPa
-     "alpha": 22.0*10**(-6), # strain per kelvin (@RT)
+     "alpha": 22.0*10**(-6),  # strain per kelvin (@RT)
+     "ratio": 0.55  # SYS = approx k * sigma_y
      }
 
 A6061_T6 = \
@@ -12,7 +12,8 @@ A6061_T6 = \
      "E": 69,  # Young's modulus in GPa
      "sigma_ult": 310,  # Ultimate tensile strength in MPa
      "sigma_y": 270,  # Yield strength in MPa
-     "alpha": 23.6*10**(-6), # strain per kelvin (RT - 100C)
+     "alpha": 23.6*10**(-6),  # strain per kelvin (RT - 100C)
+     "ratio": 0.55  # SYS = approx k * sigma_y
      }
 
 Ti_6Al_4V = \
@@ -20,7 +21,8 @@ Ti_6Al_4V = \
      "E": 104,  # Young's modulus in GPa
      "sigma_ult": 900,  # Ultimate tensile strength in MPa
      "sigma_y": 880,  # Yield strength in MPa
-     "alpha": 9.0*10**(-6), # strain per kelvin (RT - 100C)
+     "alpha": 9.0*10**(-6),  # strain per kelvin (RT - 100C)
+     "ratio": 0.55  # SYS = approx k * sigma_y
      }
 
 A2195_T84 = \
@@ -28,7 +30,8 @@ A2195_T84 = \
      "E": 78,  # Young's modulus in GPa
      "sigma_ult": 525,  # Ultimate tensile strength in MPa
      "sigma_y": 490,  # Yield strength in MPa
-     "alpha": 22.7*10**(-6), # Strain per kelvin (guess for now) 
+     "alpha": 22.7*10**(-6),  # Strain per kelvin (guess for now)
+     "ratio": 0.55  # SYS = approx k * sigma_y
      }
 # NAISI Grade 18Ni (350) Maraging Steel
 Steel = \
@@ -36,10 +39,10 @@ Steel = \
      "E": 207,  # Young's modulus in GPa
      "sigma_ult": 1140,  # Ultimate tensile strength in MPa
      "sigma_y": 827,  # Yield strength in MPa
-     "alpha": 11.3*10**(-6),   #thermal exp coef in 1/K
+     "alpha": 11.3*10**(-6),  # thermal exp coef in 1/K
      }
 
-mats = [A7075_T6, A6061_T6, Ti_6Al_4V, A2195_T84,Steel]
+mats = [A7075_T6, A6061_T6, Ti_6Al_4V, A2195_T84, Steel]
 
 """
 This code stores all defined materials (mats) in a list called mats.
