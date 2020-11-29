@@ -110,6 +110,13 @@ def getlugdimensions(sigma_y, sigma_ult):
 
 getlugdimensions(A7075_T6.get("sigma_y"),A7075_T6.get("sigma_ult"))
 
+"""
+getlugdimensions(...)[0] is D_new, diameter of the lug hole
+getlugdimensions(...)[1] is t_new, thickness of the lug
+getlugdimensions(...)[2] is w_new, width of the lug
+getlugdimensions(...)[3] is MS_obl, margin of safety for oblique loads
+getlugdimensions(...)[4] is MS_bend, margin of safety for bending loads
+"""
 
 
 

@@ -10,5 +10,26 @@ o vehicle wall pull-through checks.  RIGHT?
 """
 
 from mat import *
+from dimensions_assumed import *
 
 s = 0  # a variable to track scores
+D = []
+t = []
+w = []
+MS_obl = []
+MS_bend = []
+for mat in mats:
+    D.append(getlugdimensions(mat.get("sigma_y"), mat.get("sigma_ult"))[0])
+    t.append(getlugdimensions(mat.get("sigma_y"), mat.get("sigma_ult"))[1])
+    w.append(getlugdimensions(mat.get("sigma_y"), mat.get("sigma_ult"))[2])
+    MS_obl.append(getlugdimensions(mat.get("sigma_y"), mat.get("sigma_ult"))[3])
+    MS_bend.append(getlugdimensions(mat.get("sigma_y"), mat.get("sigma_ult"))[4])
+
+for t in t:
+    None
+
+"""
+Workflow:
+First make sure the iteration works for a single material
+Then run it for many materials
+"""
