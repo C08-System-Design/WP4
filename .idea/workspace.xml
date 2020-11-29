@@ -47,8 +47,8 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
-  <component name="RunManager" selected="Python.Thermal_orbit">
-    <configuration name="Lug_dim" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.fast_Forceratio">
+    <configuration name="Resultand_load" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="WP4" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -60,7 +60,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Lug_dim.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Resultand_load.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -111,7 +111,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="launch_loads" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="fast_Forceratio" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="WP4" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -123,7 +123,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/launch_loads.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/fast_Forceratio.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -155,11 +155,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.fast_Forceratio" />
+        <item itemvalue="Python.Resultand_load" />
         <item itemvalue="Python.Thermal_orbit" />
         <item itemvalue="Python.pattern" />
         <item itemvalue="Python.dimensions_assumed" />
-        <item itemvalue="Python.Lug_dim" />
-        <item itemvalue="Python.launch_loads" />
       </list>
     </recent_temporary>
   </component>
@@ -178,28 +178,28 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1771" height="309" key="GridCell.Tab.0.bottom" timestamp="1606466457293">
-      <screen x="0" y="23" width="1792" height="1024" />
+    <state width="1515" height="2" key="GridCell.Tab.0.bottom" timestamp="1606647657658">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1606314887898" />
+    <state width="1515" height="2" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1606647657658" />
     <state width="1771" height="309" key="GridCell.Tab.0.bottom/1792.-806.3200.1777/0.23.1792.1024@0.23.1792.1024" timestamp="1606466457293" />
     <state width="1771" height="318" key="GridCell.Tab.0.bottom/1792.-829.3200.1800/0.0.1792.1120@0.0.1792.1120" timestamp="1605267023019" />
-    <state width="1771" height="309" key="GridCell.Tab.0.center" timestamp="1606466457292">
-      <screen x="0" y="23" width="1792" height="1024" />
+    <state width="1515" height="2" key="GridCell.Tab.0.center" timestamp="1606647657657">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1606314887898" />
+    <state width="1515" height="2" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1606647657657" />
     <state width="1771" height="309" key="GridCell.Tab.0.center/1792.-806.3200.1777/0.23.1792.1024@0.23.1792.1024" timestamp="1606466457292" />
     <state width="1771" height="318" key="GridCell.Tab.0.center/1792.-829.3200.1800/0.0.1792.1120@0.0.1792.1120" timestamp="1605267023017" />
-    <state width="1771" height="309" key="GridCell.Tab.0.left" timestamp="1606466457292">
-      <screen x="0" y="23" width="1792" height="1024" />
+    <state width="1515" height="2" key="GridCell.Tab.0.left" timestamp="1606647657657">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1606314887898" />
+    <state width="1515" height="2" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1606647657657" />
     <state width="1771" height="309" key="GridCell.Tab.0.left/1792.-806.3200.1777/0.23.1792.1024@0.23.1792.1024" timestamp="1606466457292" />
     <state width="1771" height="318" key="GridCell.Tab.0.left/1792.-829.3200.1800/0.0.1792.1120@0.0.1792.1120" timestamp="1605267023017" />
-    <state width="1771" height="309" key="GridCell.Tab.0.right" timestamp="1606466457293">
-      <screen x="0" y="23" width="1792" height="1024" />
+    <state width="1515" height="2" key="GridCell.Tab.0.right" timestamp="1606647657657">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1606314887898" />
+    <state width="1515" height="2" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1606647657657" />
     <state width="1771" height="309" key="GridCell.Tab.0.right/1792.-806.3200.1777/0.23.1792.1024@0.23.1792.1024" timestamp="1606466457293" />
     <state width="1771" height="318" key="GridCell.Tab.0.right/1792.-829.3200.1800/0.0.1792.1120@0.0.1792.1120" timestamp="1605267023018" />
     <state x="277" y="57" key="SettingsEditor" timestamp="1606313641933">
