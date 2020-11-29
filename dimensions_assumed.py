@@ -1,6 +1,7 @@
 """Lug dimension determination"""
 import numpy as np
 from mat import *
+from launch_loads import *
 
 
 def getlugdimensions(sigma_y, sigma_ult):
@@ -8,12 +9,12 @@ def getlugdimensions(sigma_y, sigma_ult):
     # Material properties
     sigma_y = sigma_y*10**6  # Pa
     sigma_ult = sigma_ult*10**6  # Pa
-    P_trans0 = 2644.8/2  # N, load per lug
-    P_axial0 = 529/2  # N, per lug
+    P_trans0 = F_z/2  # N, load per lug
+    P_axial0 = F_x/2  # N, per lug
 
     P_trans = P_trans0 * 1.5  # safety factor
     P_axial = P_axial0 * 1.5  # safety factor
-    M_z = (0.6 + 0.03) * P_axial0  # assumed distance 0.03m, moment arm is 60 cm
+    M_z = (d_z + 0.03) * P_axial0  # assumed distance 0.03m, moment arm is 60 cm
 
     K_ty = 0.5  # from graph for assumed A_av/A_br
 

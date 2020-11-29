@@ -4,7 +4,7 @@ A7075_T6 = \
      "sigma_ult": 590,  # Ultimate tensile strength in MPa
      "sigma_y": 510,  # Yield strength in MPa
      "alpha": 22.0*10**(-6),  # strain per kelvin (@RT)
-     "ratio": 0.55  # SYS = approx k * sigma_y
+     "ratio": 0.55  # _pySYS = approx k * sigma_y
      }
 
 A6061_T6 = \
