@@ -5,7 +5,7 @@ o lug dimensions,
 o back-up wall bearing checks,
 o back-up wall bearing checks including thermal loads
 o back-up wall pull-through checks,
-o vehicle wall bearing checks including thermal loads
+o vehicle wall bearing checks including thermal loads (this is zero difference)
 o vehicle wall pull-through checks.  RIGHT?
 """
 
@@ -27,6 +27,23 @@ for mat in mats:
 
 for t in t:
     None
+
+"""
+Single material calculations:
+###
+D403 works excellent.
+INPUT material properties sigma_y and sigma_ult
+OUTPUT lug dimensions
+- where is the separation between two lugs?
+###
+D404 is crappy, but gets something done.
+INPUT t and w
+OUTPUT configurations (configs)
+- output contains fastener pattern and one same diameter for every fastener
+###
+D405
+"""
+
 
 """
 Workflow:
