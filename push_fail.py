@@ -1,5 +1,4 @@
 from mat import *
-from push_check import max_Fyi
 from push_check import *
 from math import pi
 

@@ -1,6 +1,4 @@
-from fast_loads import A_i, x_i, z_i, r_i
-from fast_stress import M_z, F_y
-from pattern import configs
+from fast_stress import *
 
 
 def get_Fpi(Fy, Nf): #eq 4.6 in reader
