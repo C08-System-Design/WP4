@@ -2,7 +2,7 @@ from D403 import *
 
 w = getlugdimensions(A7075_T6.get("sigma_y"), A7075_T6.get("sigma_ult"))[2]
 plate_width = w
-print(w)
+# print(w)
 plate_length = 0.1  #fake value
 h = 0.02
 t_1 = getlugdimensions(A7075_T6.get("sigma_y"), A7075_T6.get("sigma_ult"))[1]
